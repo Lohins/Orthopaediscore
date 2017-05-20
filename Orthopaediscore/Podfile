@@ -1,0 +1,18 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Orthopaediscore' do
+    
+    platform :ios, '8.0'
+    use_frameworks!
+    
+    pod 'Material', '~> 2.0'
+    
+    pod 'SDWebImage', '~> 3.5'
+    pod 'AFNetworking', '~> 2.0'
+    pod 'BlocksKit', '~> 2.2.5'
+    pod 'MBProgressHUD', '~> 0.9'
+    pod 'TPKeyboardAvoiding', '~> 1.2.4'
+    pod 'Masonry', '~> 0.5.3'
+    
+    
+end

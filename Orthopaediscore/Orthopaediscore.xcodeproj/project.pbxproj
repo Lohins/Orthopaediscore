@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		302DCFAD56EFD59C14557233 /* Pods_Orthopaediscore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */; };
+		CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */; };
+		CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44561ECE718C00D5B3E6 /* ViewController.swift */; };
+		CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECF44581ECE718C00D5B3E6 /* Main.storyboard */; };
+		CECF445C1ECE718C00D5B3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECF445B1ECE718C00D5B3E6 /* Assets.xcassets */; };
+		CECF445F1ECE718C00D5B3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECF445D1ECE718C00D5B3E6 /* LaunchScreen.storyboard */; };
+		CECF446A1ECE718C00D5B3E6 /* OrthopaediscoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44691ECE718C00D5B3E6 /* OrthopaediscoreTests.swift */; };
+		CECF44751ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44741ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift */; };
+		CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */; };
+		CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CECF44661ECE718C00D5B3E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECF44491ECE718B00D5B3E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECF44501ECE718B00D5B3E6;
+			remoteInfo = Orthopaediscore;
+		};
+		CECF44711ECE718C00D5B3E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECF44491ECE718B00D5B3E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECF44501ECE718B00D5B3E6;
+			remoteInfo = Orthopaediscore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15764DB0EF83F1CC9B57C754 /* Pods-Orthopaediscore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.debug.xcconfig"; sourceTree = "<group>"; };
+		68F9F29C5CABA46EE75C9C6F /* Pods-Orthopaediscore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.release.xcconfig"; sourceTree = "<group>"; };
+		CECF44511ECE718C00D5B3E6 /* Orthopaediscore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orthopaediscore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CECF44561ECE718C00D5B3E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CECF44591ECE718C00D5B3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CECF445B1ECE718C00D5B3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CECF445E1ECE718C00D5B3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CECF44601ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECF44651ECE718C00D5B3E6 /* OrthopaediscoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrthopaediscoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECF44691ECE718C00D5B3E6 /* OrthopaediscoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthopaediscoreTests.swift; sourceTree = "<group>"; };
+		CECF446B1ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECF44701ECE718C00D5B3E6 /* OrthopaediscoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrthopaediscoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECF44741ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthopaediscoreUITests.swift; sourceTree = "<group>"; };
+		CECF44761ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSWelcomeViewController.swift; sourceTree = "<group>"; };
+		CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSWelcomeViewController.xib; sourceTree = "<group>"; };
+		F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orthopaediscore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CECF444E1ECE718B00D5B3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302DCFAD56EFD59C14557233 /* Pods_Orthopaediscore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF44621ECE718C00D5B3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF446D1ECE718C00D5B3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA5C5D2886EC07DB3E56C5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15764DB0EF83F1CC9B57C754 /* Pods-Orthopaediscore.debug.xcconfig */,
+				68F9F29C5CABA46EE75C9C6F /* Pods-Orthopaediscore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3CE952FD6229820F060157C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECF44481ECE718B00D5B3E6 = {
+			isa = PBXGroup;
+			children = (
+				CECF44531ECE718C00D5B3E6 /* Orthopaediscore */,
+				CECF44681ECE718C00D5B3E6 /* OrthopaediscoreTests */,
+				CECF44731ECE718C00D5B3E6 /* OrthopaediscoreUITests */,
+				CECF44521ECE718C00D5B3E6 /* Products */,
+				8AA5C5D2886EC07DB3E56C5A /* Pods */,
+				B3CE952FD6229820F060157C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CECF44521ECE718C00D5B3E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44511ECE718C00D5B3E6 /* Orthopaediscore.app */,
+				CECF44651ECE718C00D5B3E6 /* OrthopaediscoreTests.xctest */,
+				CECF44701ECE718C00D5B3E6 /* OrthopaediscoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CECF44531ECE718C00D5B3E6 /* Orthopaediscore */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44851ECE725400D5B3E6 /* core */,
+				CECF44861ECE725400D5B3E6 /* model */,
+				CECF44871ECE725400D5B3E6 /* service */,
+				CECF44881ECE725400D5B3E6 /* UI */,
+				CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */,
+				CECF44561ECE718C00D5B3E6 /* ViewController.swift */,
+				CECF44581ECE718C00D5B3E6 /* Main.storyboard */,
+				CECF445B1ECE718C00D5B3E6 /* Assets.xcassets */,
+				CECF445D1ECE718C00D5B3E6 /* LaunchScreen.storyboard */,
+				CECF44601ECE718C00D5B3E6 /* Info.plist */,
+			);
+			path = Orthopaediscore;
+			sourceTree = "<group>";
+		};
+		CECF44681ECE718C00D5B3E6 /* OrthopaediscoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44691ECE718C00D5B3E6 /* OrthopaediscoreTests.swift */,
+				CECF446B1ECE718C00D5B3E6 /* Info.plist */,
+			);
+			path = OrthopaediscoreTests;
+			sourceTree = "<group>";
+		};
+		CECF44731ECE718C00D5B3E6 /* OrthopaediscoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44741ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift */,
+				CECF44761ECE718C00D5B3E6 /* Info.plist */,
+			);
+			path = OrthopaediscoreUITests;
+			sourceTree = "<group>";
+		};
+		CECF44851ECE725400D5B3E6 /* core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		CECF44861ECE725400D5B3E6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CECF44871ECE725400D5B3E6 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		CECF44881ECE725400D5B3E6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44891ECE72E900D5B3E6 /* main */,
+				CECF448C1ECE72E900D5B3E6 /* register */,
+				CECF448F1ECE72E900D5B3E6 /* welcomepage */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CECF44891ECE72E900D5B3E6 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CECF448A1ECE72E900D5B3E6 /* controller */,
+				CECF448B1ECE72E900D5B3E6 /* view */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		CECF448A1ECE72E900D5B3E6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CECF448B1ECE72E900D5B3E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		CECF448C1ECE72E900D5B3E6 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				CECF448D1ECE72E900D5B3E6 /* controller */,
+				CECF448E1ECE72E900D5B3E6 /* view */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		CECF448D1ECE72E900D5B3E6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CECF448E1ECE72E900D5B3E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		CECF448F1ECE72E900D5B3E6 /* welcomepage */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44901ECE72E900D5B3E6 /* controller */,
+				CECF44911ECE72E900D5B3E6 /* view */,
+			);
+			path = welcomepage;
+			sourceTree = "<group>";
+		};
+		CECF44901ECE72E900D5B3E6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */,
+				CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CECF44911ECE72E900D5B3E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CECF44501ECE718B00D5B3E6 /* Orthopaediscore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECF44791ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "Orthopaediscore" */;
+			buildPhases = (
+				F33FF330BE036070EF69D88D /* [CP] Check Pods Manifest.lock */,
+				CECF444D1ECE718B00D5B3E6 /* Sources */,
+				CECF444E1ECE718B00D5B3E6 /* Frameworks */,
+				CECF444F1ECE718B00D5B3E6 /* Resources */,
+				A1240A215C8621537D52E944 /* [CP] Embed Pods Frameworks */,
+				B1F0453A9B05C11FF1555A56 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orthopaediscore;
+			productName = Orthopaediscore;
+			productReference = CECF44511ECE718C00D5B3E6 /* Orthopaediscore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CECF44641ECE718C00D5B3E6 /* OrthopaediscoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECF447C1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreTests" */;
+			buildPhases = (
+				CECF44611ECE718C00D5B3E6 /* Sources */,
+				CECF44621ECE718C00D5B3E6 /* Frameworks */,
+				CECF44631ECE718C00D5B3E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECF44671ECE718C00D5B3E6 /* PBXTargetDependency */,
+			);
+			name = OrthopaediscoreTests;
+			productName = OrthopaediscoreTests;
+			productReference = CECF44651ECE718C00D5B3E6 /* OrthopaediscoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CECF446F1ECE718C00D5B3E6 /* OrthopaediscoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECF447F1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreUITests" */;
+			buildPhases = (
+				CECF446C1ECE718C00D5B3E6 /* Sources */,
+				CECF446D1ECE718C00D5B3E6 /* Frameworks */,
+				CECF446E1ECE718C00D5B3E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECF44721ECE718C00D5B3E6 /* PBXTargetDependency */,
+			);
+			name = OrthopaediscoreUITests;
+			productName = OrthopaediscoreUITests;
+			productReference = CECF44701ECE718C00D5B3E6 /* OrthopaediscoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CECF44491ECE718B00D5B3E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = S.t;
+				TargetAttributes = {
+					CECF44501ECE718B00D5B3E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					CECF44641ECE718C00D5B3E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CECF44501ECE718B00D5B3E6;
+					};
+					CECF446F1ECE718C00D5B3E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CECF44501ECE718B00D5B3E6;
+					};
+				};
+			};
+			buildConfigurationList = CECF444C1ECE718B00D5B3E6 /* Build configuration list for PBXProject "Orthopaediscore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CECF44481ECE718B00D5B3E6;
+			productRefGroup = CECF44521ECE718C00D5B3E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CECF44501ECE718B00D5B3E6 /* Orthopaediscore */,
+				CECF44641ECE718C00D5B3E6 /* OrthopaediscoreTests */,
+				CECF446F1ECE718C00D5B3E6 /* OrthopaediscoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CECF444F1ECE718B00D5B3E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECF445F1ECE718C00D5B3E6 /* LaunchScreen.storyboard in Resources */,
+				CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */,
+				CECF445C1ECE718C00D5B3E6 /* Assets.xcassets in Resources */,
+				CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF44631ECE718C00D5B3E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF446E1ECE718C00D5B3E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1240A215C8621537D52E944 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1F0453A9B05C11FF1555A56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33FF330BE036070EF69D88D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CECF444D1ECE718B00D5B3E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */,
+				CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */,
+				CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF44611ECE718C00D5B3E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECF446A1ECE718C00D5B3E6 /* OrthopaediscoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF446C1ECE718C00D5B3E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECF44751ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECF44671ECE718C00D5B3E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECF44501ECE718B00D5B3E6 /* Orthopaediscore */;
+			targetProxy = CECF44661ECE718C00D5B3E6 /* PBXContainerItemProxy */;
+		};
+		CECF44721ECE718C00D5B3E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECF44501ECE718B00D5B3E6 /* Orthopaediscore */;
+			targetProxy = CECF44711ECE718C00D5B3E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CECF44581ECE718C00D5B3E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECF44591ECE718C00D5B3E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CECF445D1ECE718C00D5B3E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECF445E1ECE718C00D5B3E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CECF44771ECE718C00D5B3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CECF44781ECE718C00D5B3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CECF447A1ECE718C00D5B3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15764DB0EF83F1CC9B57C754 /* Pods-Orthopaediscore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Orthopaediscore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.Orthopaediscore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CECF447B1ECE718C00D5B3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F9F29C5CABA46EE75C9C6F /* Pods-Orthopaediscore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Orthopaediscore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.Orthopaediscore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CECF447D1ECE718C00D5B3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrthopaediscoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.OrthopaediscoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orthopaediscore.app/Orthopaediscore";
+			};
+			name = Debug;
+		};
+		CECF447E1ECE718C00D5B3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrthopaediscoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.OrthopaediscoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orthopaediscore.app/Orthopaediscore";
+			};
+			name = Release;
+		};
+		CECF44801ECE718C00D5B3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OrthopaediscoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.OrthopaediscoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Orthopaediscore;
+			};
+			name = Debug;
+		};
+		CECF44811ECE718C00D5B3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OrthopaediscoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oooo.OrthopaediscoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Orthopaediscore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CECF444C1ECE718B00D5B3E6 /* Build configuration list for PBXProject "Orthopaediscore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECF44771ECE718C00D5B3E6 /* Debug */,
+				CECF44781ECE718C00D5B3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECF44791ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "Orthopaediscore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECF447A1ECE718C00D5B3E6 /* Debug */,
+				CECF447B1ECE718C00D5B3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CECF447C1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECF447D1ECE718C00D5B3E6 /* Debug */,
+				CECF447E1ECE718C00D5B3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CECF447F1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECF44801ECE718C00D5B3E6 /* Debug */,
+				CECF44811ECE718C00D5B3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CECF44491ECE718B00D5B3E6 /* Project object */;
+}
