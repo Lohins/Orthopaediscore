@@ -58,6 +58,11 @@ class OSWelcomeViewController: UIViewController {
     
     
     @IBAction func LoginAction(_ sender: Any) {
+        
+        let vc = OSMainViewController()
+        
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func RegisterAction(_ sender: Any) {

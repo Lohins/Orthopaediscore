@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		302DCFAD56EFD59C14557233 /* Pods_Orthopaediscore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */; };
+		CE65A23E1ED4D52F00DBA8C2 /* OSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A23C1ED4D52F00DBA8C2 /* OSMainViewController.swift */; };
+		CE65A23F1ED4D52F00DBA8C2 /* OSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE65A23D1ED4D52F00DBA8C2 /* OSMainViewController.xib */; };
+		CE65A2411ED4D69300DBA8C2 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A2401ED4D69300DBA8C2 /* Global.swift */; };
+		CE65A2431ED4DA3900DBA8C2 /* OSMainSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A2421ED4DA3900DBA8C2 /* OSMainSectionView.swift */; };
+		CE65A2481ED4DD0900DBA8C2 /* OSMainSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE65A2471ED4DD0900DBA8C2 /* OSMainSectionView.xib */; };
+		CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A2491ED4E32600DBA8C2 /* Double-Extension.swift */; };
+		CE65A2521ED4E32600DBA8C2 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24B1ED4E32600DBA8C2 /* UIColor-Extension.swift */; };
+		CE65A2531ED4E32600DBA8C2 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24C1ED4E32600DBA8C2 /* UIImage-Extension.swift */; };
+		CE65A2541ED4E32600DBA8C2 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24D1ED4E32600DBA8C2 /* UIImage+Gif.swift */; };
+		CE65A2551ED4E32600DBA8C2 /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24E1ED4E32600DBA8C2 /* UIImageView-Extension.swift */; };
+		CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */; };
 		CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */; };
 		CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44561ECE718C00D5B3E6 /* ViewController.swift */; };
 		CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECF44581ECE718C00D5B3E6 /* Main.storyboard */; };
@@ -39,6 +50,17 @@
 /* Begin PBXFileReference section */
 		15764DB0EF83F1CC9B57C754 /* Pods-Orthopaediscore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.debug.xcconfig"; sourceTree = "<group>"; };
 		68F9F29C5CABA46EE75C9C6F /* Pods-Orthopaediscore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.release.xcconfig"; sourceTree = "<group>"; };
+		CE65A23C1ED4D52F00DBA8C2 /* OSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMainViewController.swift; sourceTree = "<group>"; };
+		CE65A23D1ED4D52F00DBA8C2 /* OSMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSMainViewController.xib; sourceTree = "<group>"; };
+		CE65A2401ED4D69300DBA8C2 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		CE65A2421ED4DA3900DBA8C2 /* OSMainSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMainSectionView.swift; sourceTree = "<group>"; };
+		CE65A2471ED4DD0900DBA8C2 /* OSMainSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSMainSectionView.xib; sourceTree = "<group>"; };
+		CE65A2491ED4E32600DBA8C2 /* Double-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
+		CE65A24B1ED4E32600DBA8C2 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		CE65A24C1ED4E32600DBA8C2 /* UIImage-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		CE65A24D1ED4E32600DBA8C2 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		CE65A24E1ED4E32600DBA8C2 /* UIImageView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
+		CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		CECF44511ECE718C00D5B3E6 /* Orthopaediscore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orthopaediscore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECF44561ECE718C00D5B3E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +122,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE65A2441ED4DB0600DBA8C2 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE65A2491ED4E32600DBA8C2 /* Double-Extension.swift */,
+				CE65A24B1ED4E32600DBA8C2 /* UIColor-Extension.swift */,
+				CE65A24C1ED4E32600DBA8C2 /* UIImage-Extension.swift */,
+				CE65A24D1ED4E32600DBA8C2 /* UIImage+Gif.swift */,
+				CE65A24E1ED4E32600DBA8C2 /* UIImageView-Extension.swift */,
+				CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		CECF44481ECE718B00D5B3E6 = {
 			isa = PBXGroup;
 			children = (
@@ -125,16 +160,17 @@
 		CECF44531ECE718C00D5B3E6 /* Orthopaediscore */ = {
 			isa = PBXGroup;
 			children = (
+				CECF44601ECE718C00D5B3E6 /* Info.plist */,
+				CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */,
+				CECF44561ECE718C00D5B3E6 /* ViewController.swift */,
+				CECF445B1ECE718C00D5B3E6 /* Assets.xcassets */,
 				CECF44851ECE725400D5B3E6 /* core */,
+				CE65A2441ED4DB0600DBA8C2 /* extension */,
+				CECF445D1ECE718C00D5B3E6 /* LaunchScreen.storyboard */,
+				CECF44581ECE718C00D5B3E6 /* Main.storyboard */,
 				CECF44861ECE725400D5B3E6 /* model */,
 				CECF44871ECE725400D5B3E6 /* service */,
 				CECF44881ECE725400D5B3E6 /* UI */,
-				CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */,
-				CECF44561ECE718C00D5B3E6 /* ViewController.swift */,
-				CECF44581ECE718C00D5B3E6 /* Main.storyboard */,
-				CECF445B1ECE718C00D5B3E6 /* Assets.xcassets */,
-				CECF445D1ECE718C00D5B3E6 /* LaunchScreen.storyboard */,
-				CECF44601ECE718C00D5B3E6 /* Info.plist */,
 			);
 			path = Orthopaediscore;
 			sourceTree = "<group>";
@@ -160,6 +196,7 @@
 		CECF44851ECE725400D5B3E6 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				CE65A2401ED4D69300DBA8C2 /* Global.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -200,6 +237,8 @@
 		CECF448A1ECE72E900D5B3E6 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE65A23C1ED4D52F00DBA8C2 /* OSMainViewController.swift */,
+				CE65A23D1ED4D52F00DBA8C2 /* OSMainViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -207,6 +246,8 @@
 		CECF448B1ECE72E900D5B3E6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE65A2421ED4DA3900DBA8C2 /* OSMainSectionView.swift */,
+				CE65A2471ED4DD0900DBA8C2 /* OSMainSectionView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -370,7 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECF445F1ECE718C00D5B3E6 /* LaunchScreen.storyboard in Resources */,
+				CE65A23F1ED4D52F00DBA8C2 /* OSMainViewController.xib in Resources */,
 				CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */,
+				CE65A2481ED4DD0900DBA8C2 /* OSMainSectionView.xib in Resources */,
 				CECF445C1ECE718C00D5B3E6 /* Assets.xcassets in Resources */,
 				CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */,
 			);
@@ -445,9 +488,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65A2551ED4E32600DBA8C2 /* UIImageView-Extension.swift in Sources */,
 				CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */,
+				CE65A2521ED4E32600DBA8C2 /* UIColor-Extension.swift in Sources */,
+				CE65A2431ED4DA3900DBA8C2 /* OSMainSectionView.swift in Sources */,
 				CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */,
 				CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */,
+				CE65A2531ED4E32600DBA8C2 /* UIImage-Extension.swift in Sources */,
+				CE65A2541ED4E32600DBA8C2 /* UIImage+Gif.swift in Sources */,
+				CE65A2411ED4D69300DBA8C2 /* Global.swift in Sources */,
+				CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */,
+				CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */,
+				CE65A23E1ED4D52F00DBA8C2 /* OSMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +744,7 @@
 				CECF447B1ECE718C00D5B3E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CECF447C1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreTests" */ = {
 			isa = XCConfigurationList;
@@ -700,6 +753,7 @@
 				CECF447E1ECE718C00D5B3E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CECF447F1ECE718C00D5B3E6 /* Build configuration list for PBXNativeTarget "OrthopaediscoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +762,7 @@
 				CECF44811ECE718C00D5B3E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
