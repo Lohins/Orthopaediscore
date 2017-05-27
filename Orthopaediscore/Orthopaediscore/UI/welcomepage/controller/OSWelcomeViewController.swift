@@ -59,8 +59,8 @@ class OSWelcomeViewController: UIViewController {
     
     @IBAction func LoginAction(_ sender: Any) {
         
-        let vc = OSMainViewController()
-        
+        //let vc = OSMainViewController()
+        let vc = OSPatientViewController()
         
         self.present(vc, animated: true, completion: nil)
     }

@@ -28,6 +28,10 @@
 		CECF44751ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44741ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift */; };
 		CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */; };
 		CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */; };
+		EA06546F1ED93F36009B87C9 /* OSPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */; };
+		EA0654701ED93F36009B87C9 /* OSPatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */; };
+		EA0654731ED96B49009B87C9 /* OSPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */; };
+		EA0654741ED96B49009B87C9 /* OSPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		CECF44761ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSWelcomeViewController.swift; sourceTree = "<group>"; };
 		CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSWelcomeViewController.xib; sourceTree = "<group>"; };
+		EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientTableViewCell.swift; sourceTree = "<group>"; };
+		EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientTableViewCell.xib; sourceTree = "<group>"; };
+		EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientViewController.swift; sourceTree = "<group>"; };
+		EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientViewController.xib; sourceTree = "<group>"; };
 		F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orthopaediscore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,6 +247,8 @@
 			children = (
 				CE65A23C1ED4D52F00DBA8C2 /* OSMainViewController.swift */,
 				CE65A23D1ED4D52F00DBA8C2 /* OSMainViewController.xib */,
+				EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */,
+				EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -248,6 +258,8 @@
 			children = (
 				CE65A2421ED4DA3900DBA8C2 /* OSMainSectionView.swift */,
 				CE65A2471ED4DD0900DBA8C2 /* OSMainSectionView.xib */,
+				EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */,
+				EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -410,7 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0654701ED93F36009B87C9 /* OSPatientTableViewCell.xib in Resources */,
 				CECF445F1ECE718C00D5B3E6 /* LaunchScreen.storyboard in Resources */,
+				EA0654741ED96B49009B87C9 /* OSPatientViewController.xib in Resources */,
 				CE65A23F1ED4D52F00DBA8C2 /* OSMainViewController.xib in Resources */,
 				CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */,
 				CE65A2481ED4DD0900DBA8C2 /* OSMainSectionView.xib in Resources */,
@@ -499,6 +513,8 @@
 				CE65A2411ED4D69300DBA8C2 /* Global.swift in Sources */,
 				CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */,
 				CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */,
+				EA06546F1ED93F36009B87C9 /* OSPatientTableViewCell.swift in Sources */,
+				EA0654731ED96B49009B87C9 /* OSPatientViewController.swift in Sources */,
 				CE65A23E1ED4D52F00DBA8C2 /* OSMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

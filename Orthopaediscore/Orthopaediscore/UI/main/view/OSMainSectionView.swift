@@ -45,7 +45,6 @@ class OSMainSectionView: UIView {
     
     @IBOutlet var titleLabel: UILabel!
     
-    
     func setupUI(){
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 3
@@ -56,4 +55,5 @@ class OSMainSectionView: UIView {
         self.iconImage.image = icon
         self.titleLabel.text = title
     }
+    
 }

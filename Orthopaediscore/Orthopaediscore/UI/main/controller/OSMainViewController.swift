@@ -39,6 +39,7 @@ class OSMainViewController: UIViewController {
         let sep_width = (section_width - margin_horizon) / 2
         let sectionView1 = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
         sectionView1.update("管理患者", UIImage.init(named: "tmpicon")!)
+
         
         // 分配量表
         let sectionView2 = OSMainSectionView.init(frame: CGRect.init(x:  sectionView1.right + margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
@@ -68,6 +69,13 @@ class OSMainViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func ManageAction(_ sender: Any) {
+        
+        let vc = OSPatientViewController()
+        
+        
+        self.present(vc, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
