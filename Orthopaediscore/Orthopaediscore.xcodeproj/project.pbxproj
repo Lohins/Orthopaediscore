@@ -80,10 +80,10 @@
 		CECF44761ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSWelcomeViewController.swift; sourceTree = "<group>"; };
 		CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSWelcomeViewController.xib; sourceTree = "<group>"; };
-		EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientTableViewCell.swift; sourceTree = "<group>"; };
-		EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientTableViewCell.xib; sourceTree = "<group>"; };
-		EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientViewController.swift; sourceTree = "<group>"; };
-		EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientViewController.xib; sourceTree = "<group>"; };
+		EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSPatientTableViewCell.swift; path = main/view/OSPatientTableViewCell.swift; sourceTree = "<group>"; };
+		EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OSPatientTableViewCell.xib; path = main/view/OSPatientTableViewCell.xib; sourceTree = "<group>"; };
+		EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSPatientViewController.swift; path = main/controller/OSPatientViewController.swift; sourceTree = "<group>"; };
+		EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OSPatientViewController.xib; path = main/controller/OSPatientViewController.xib; sourceTree = "<group>"; };
 		F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orthopaediscore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -226,6 +226,7 @@
 		CECF44881ECE725400D5B3E6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA0654751EDA037E009B87C9 /* patientlist */,
 				CECF44891ECE72E900D5B3E6 /* main */,
 				CECF448C1ECE72E900D5B3E6 /* register */,
 				CECF448F1ECE72E900D5B3E6 /* welcomepage */,
@@ -247,8 +248,6 @@
 			children = (
 				CE65A23C1ED4D52F00DBA8C2 /* OSMainViewController.swift */,
 				CE65A23D1ED4D52F00DBA8C2 /* OSMainViewController.xib */,
-				EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */,
-				EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -258,8 +257,6 @@
 			children = (
 				CE65A2421ED4DA3900DBA8C2 /* OSMainSectionView.swift */,
 				CE65A2471ED4DD0900DBA8C2 /* OSMainSectionView.xib */,
-				EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */,
-				EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -310,6 +307,33 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		EA0654751EDA037E009B87C9 /* patientlist */ = {
+			isa = PBXGroup;
+			children = (
+				EA0654761EDA039F009B87C9 /* controller */,
+				EA0654771EDA03A9009B87C9 /* view */,
+			);
+			name = patientlist;
+			sourceTree = "<group>";
+		};
+		EA0654761EDA039F009B87C9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */,
+				EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		EA0654771EDA03A9009B87C9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */,
+				EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
