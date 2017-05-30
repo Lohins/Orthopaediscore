@@ -19,6 +19,20 @@
 		CE65A2541ED4E32600DBA8C2 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24D1ED4E32600DBA8C2 /* UIImage+Gif.swift */; };
 		CE65A2551ED4E32600DBA8C2 /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24E1ED4E32600DBA8C2 /* UIImageView-Extension.swift */; };
 		CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */; };
+		CE697C301EDA24B6009572E3 /* OSPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C2B1EDA24B6009572E3 /* OSPatientViewController.swift */; };
+		CE697C311EDA24B6009572E3 /* OSPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C2C1EDA24B6009572E3 /* OSPatientViewController.xib */; };
+		CE697C321EDA24B6009572E3 /* OSPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C2E1EDA24B6009572E3 /* OSPatientTableViewCell.swift */; };
+		CE697C331EDA24B6009572E3 /* OSPatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C2F1EDA24B6009572E3 /* OSPatientTableViewCell.xib */; };
+		CE697C361EDBCB56009572E3 /* OSPatientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C341EDBCB56009572E3 /* OSPatientDetailViewController.swift */; };
+		CE697C371EDBCB56009572E3 /* OSPatientDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C351EDBCB56009572E3 /* OSPatientDetailViewController.xib */; };
+		CE697C391EDC6340009572E3 /* OSPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C381EDC6340009572E3 /* OSPickerView.swift */; };
+		CE697C3D1EDC6860009572E3 /* OSDropListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C3C1EDC6860009572E3 /* OSDropListView.swift */; };
+		CE697C3F1EDC6871009572E3 /* OSDropListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C3E1EDC6871009572E3 /* OSDropListView.xib */; };
+		CE697C411EDC6A13009572E3 /* OSInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C401EDC6A13009572E3 /* OSInputView.swift */; };
+		CE697C431EDC6A24009572E3 /* OSInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C421EDC6A24009572E3 /* OSInputView.xib */; };
+		CE697C451EDD04B4009572E3 /* OSTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C441EDD04B4009572E3 /* OSTimePickerView.swift */; };
+		CE697C491EDD07EF009572E3 /* OSDateSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697C481EDD07EE009572E3 /* OSDateSelectView.swift */; };
+		CE697C4B1EDD0800009572E3 /* OSDateSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE697C4A1EDD0800009572E3 /* OSDateSelectView.xib */; };
 		CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */; };
 		CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44561ECE718C00D5B3E6 /* ViewController.swift */; };
 		CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECF44581ECE718C00D5B3E6 /* Main.storyboard */; };
@@ -28,10 +42,6 @@
 		CECF44751ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44741ECE718C00D5B3E6 /* OrthopaediscoreUITests.swift */; };
 		CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */; };
 		CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */; };
-		EA06546F1ED93F36009B87C9 /* OSPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */; };
-		EA0654701ED93F36009B87C9 /* OSPatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */; };
-		EA0654731ED96B49009B87C9 /* OSPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */; };
-		EA0654741ED96B49009B87C9 /* OSPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +75,20 @@
 		CE65A24D1ED4E32600DBA8C2 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		CE65A24E1ED4E32600DBA8C2 /* UIImageView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
 		CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		CE697C2B1EDA24B6009572E3 /* OSPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientViewController.swift; sourceTree = "<group>"; };
+		CE697C2C1EDA24B6009572E3 /* OSPatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientViewController.xib; sourceTree = "<group>"; };
+		CE697C2E1EDA24B6009572E3 /* OSPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientTableViewCell.swift; sourceTree = "<group>"; };
+		CE697C2F1EDA24B6009572E3 /* OSPatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientTableViewCell.xib; sourceTree = "<group>"; };
+		CE697C341EDBCB56009572E3 /* OSPatientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientDetailViewController.swift; sourceTree = "<group>"; };
+		CE697C351EDBCB56009572E3 /* OSPatientDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPatientDetailViewController.xib; sourceTree = "<group>"; };
+		CE697C381EDC6340009572E3 /* OSPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPickerView.swift; sourceTree = "<group>"; };
+		CE697C3C1EDC6860009572E3 /* OSDropListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSDropListView.swift; sourceTree = "<group>"; };
+		CE697C3E1EDC6871009572E3 /* OSDropListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSDropListView.xib; sourceTree = "<group>"; };
+		CE697C401EDC6A13009572E3 /* OSInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSInputView.swift; sourceTree = "<group>"; };
+		CE697C421EDC6A24009572E3 /* OSInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSInputView.xib; sourceTree = "<group>"; };
+		CE697C441EDD04B4009572E3 /* OSTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTimePickerView.swift; sourceTree = "<group>"; };
+		CE697C481EDD07EE009572E3 /* OSDateSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSDateSelectView.swift; sourceTree = "<group>"; };
+		CE697C4A1EDD0800009572E3 /* OSDateSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSDateSelectView.xib; sourceTree = "<group>"; };
 		CECF44511ECE718C00D5B3E6 /* Orthopaediscore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orthopaediscore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECF44541ECE718C00D5B3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECF44561ECE718C00D5B3E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +104,6 @@
 		CECF44761ECE718C00D5B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECF44941ECE735800D5B3E6 /* OSWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSWelcomeViewController.swift; sourceTree = "<group>"; };
 		CECF44951ECE735800D5B3E6 /* OSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSWelcomeViewController.xib; sourceTree = "<group>"; };
-		EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSPatientTableViewCell.swift; path = main/view/OSPatientTableViewCell.swift; sourceTree = "<group>"; };
-		EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OSPatientTableViewCell.xib; path = main/view/OSPatientTableViewCell.xib; sourceTree = "<group>"; };
-		EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSPatientViewController.swift; path = main/controller/OSPatientViewController.swift; sourceTree = "<group>"; };
-		EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OSPatientViewController.xib; path = main/controller/OSPatientViewController.xib; sourceTree = "<group>"; };
 		F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orthopaediscore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +161,43 @@
 				CE65A24F1ED4E32600DBA8C2 /* UIView-Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		CE697C291EDA24B6009572E3 /* patientlist */ = {
+			isa = PBXGroup;
+			children = (
+				CE697C2A1EDA24B6009572E3 /* controller */,
+				CE697C2D1EDA24B6009572E3 /* view */,
+			);
+			path = patientlist;
+			sourceTree = "<group>";
+		};
+		CE697C2A1EDA24B6009572E3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE697C2B1EDA24B6009572E3 /* OSPatientViewController.swift */,
+				CE697C2C1EDA24B6009572E3 /* OSPatientViewController.xib */,
+				CE697C341EDBCB56009572E3 /* OSPatientDetailViewController.swift */,
+				CE697C351EDBCB56009572E3 /* OSPatientDetailViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CE697C2D1EDA24B6009572E3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CE697C2E1EDA24B6009572E3 /* OSPatientTableViewCell.swift */,
+				CE697C2F1EDA24B6009572E3 /* OSPatientTableViewCell.xib */,
+				CE697C381EDC6340009572E3 /* OSPickerView.swift */,
+				CE697C3C1EDC6860009572E3 /* OSDropListView.swift */,
+				CE697C3E1EDC6871009572E3 /* OSDropListView.xib */,
+				CE697C401EDC6A13009572E3 /* OSInputView.swift */,
+				CE697C421EDC6A24009572E3 /* OSInputView.xib */,
+				CE697C441EDD04B4009572E3 /* OSTimePickerView.swift */,
+				CE697C481EDD07EE009572E3 /* OSDateSelectView.swift */,
+				CE697C4A1EDD0800009572E3 /* OSDateSelectView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		CECF44481ECE718B00D5B3E6 = {
@@ -226,7 +283,7 @@
 		CECF44881ECE725400D5B3E6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EA0654751EDA037E009B87C9 /* patientlist */,
+				CE697C291EDA24B6009572E3 /* patientlist */,
 				CECF44891ECE72E900D5B3E6 /* main */,
 				CECF448C1ECE72E900D5B3E6 /* register */,
 				CECF448F1ECE72E900D5B3E6 /* welcomepage */,
@@ -307,33 +364,6 @@
 			children = (
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		EA0654751EDA037E009B87C9 /* patientlist */ = {
-			isa = PBXGroup;
-			children = (
-				EA0654761EDA039F009B87C9 /* controller */,
-				EA0654771EDA03A9009B87C9 /* view */,
-			);
-			name = patientlist;
-			sourceTree = "<group>";
-		};
-		EA0654761EDA039F009B87C9 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				EA0654711ED96B49009B87C9 /* OSPatientViewController.swift */,
-				EA0654721ED96B49009B87C9 /* OSPatientViewController.xib */,
-			);
-			name = controller;
-			sourceTree = "<group>";
-		};
-		EA0654771EDA03A9009B87C9 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				EA06546D1ED93F36009B87C9 /* OSPatientTableViewCell.swift */,
-				EA06546E1ED93F36009B87C9 /* OSPatientTableViewCell.xib */,
-			);
-			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,12 +476,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0654701ED93F36009B87C9 /* OSPatientTableViewCell.xib in Resources */,
+				CE697C431EDC6A24009572E3 /* OSInputView.xib in Resources */,
 				CECF445F1ECE718C00D5B3E6 /* LaunchScreen.storyboard in Resources */,
-				EA0654741ED96B49009B87C9 /* OSPatientViewController.xib in Resources */,
+				CE697C311EDA24B6009572E3 /* OSPatientViewController.xib in Resources */,
 				CE65A23F1ED4D52F00DBA8C2 /* OSMainViewController.xib in Resources */,
+				CE697C4B1EDD0800009572E3 /* OSDateSelectView.xib in Resources */,
 				CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */,
 				CE65A2481ED4DD0900DBA8C2 /* OSMainSectionView.xib in Resources */,
+				CE697C331EDA24B6009572E3 /* OSPatientTableViewCell.xib in Resources */,
+				CE697C371EDBCB56009572E3 /* OSPatientDetailViewController.xib in Resources */,
+				CE697C3F1EDC6871009572E3 /* OSDropListView.xib in Resources */,
 				CECF445C1ECE718C00D5B3E6 /* Assets.xcassets in Resources */,
 				CECF445A1ECE718C00D5B3E6 /* Main.storyboard in Resources */,
 			);
@@ -532,13 +566,19 @@
 				CE65A2431ED4DA3900DBA8C2 /* OSMainSectionView.swift in Sources */,
 				CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */,
 				CECF44551ECE718C00D5B3E6 /* AppDelegate.swift in Sources */,
+				CE697C361EDBCB56009572E3 /* OSPatientDetailViewController.swift in Sources */,
 				CE65A2531ED4E32600DBA8C2 /* UIImage-Extension.swift in Sources */,
+				CE697C391EDC6340009572E3 /* OSPickerView.swift in Sources */,
+				CE697C451EDD04B4009572E3 /* OSTimePickerView.swift in Sources */,
+				CE697C411EDC6A13009572E3 /* OSInputView.swift in Sources */,
+				CE697C301EDA24B6009572E3 /* OSPatientViewController.swift in Sources */,
+				CE697C491EDD07EF009572E3 /* OSDateSelectView.swift in Sources */,
 				CE65A2541ED4E32600DBA8C2 /* UIImage+Gif.swift in Sources */,
+				CE697C321EDA24B6009572E3 /* OSPatientTableViewCell.swift in Sources */,
 				CE65A2411ED4D69300DBA8C2 /* Global.swift in Sources */,
 				CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */,
+				CE697C3D1EDC6860009572E3 /* OSDropListView.swift in Sources */,
 				CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */,
-				EA06546F1ED93F36009B87C9 /* OSPatientTableViewCell.swift in Sources */,
-				EA0654731ED96B49009B87C9 /* OSPatientViewController.swift in Sources */,
 				CE65A23E1ED4D52F00DBA8C2 /* OSMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

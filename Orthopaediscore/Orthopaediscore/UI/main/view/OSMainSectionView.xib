@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,13 +41,23 @@
                         <constraint firstAttribute="width" secondItem="9KJ-6K-ceP" secondAttribute="height" multiplier="1:1" id="Aqh-0B-ExD"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opO-GP-oFN">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    <connections>
+                        <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="oED-cb-YVc"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="kS3-GK-CMs" secondAttribute="bottom" constant="8" id="035-3p-Jqs"/>
                 <constraint firstItem="kS3-GK-CMs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1sg-gf-eXH"/>
+                <constraint firstAttribute="trailing" secondItem="opO-GP-oFN" secondAttribute="trailing" id="8Ho-DT-7ep"/>
+                <constraint firstItem="opO-GP-oFN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YOX-Cc-pc0"/>
                 <constraint firstItem="kS3-GK-CMs" firstAttribute="top" secondItem="9KJ-6K-ceP" secondAttribute="bottom" constant="5" id="awQ-of-op2"/>
                 <constraint firstItem="9KJ-6K-ceP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ban-5v-qwa"/>
+                <constraint firstAttribute="bottom" secondItem="opO-GP-oFN" secondAttribute="bottom" id="pBk-Z7-l2B"/>
+                <constraint firstItem="opO-GP-oFN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rII-ID-pJa"/>
                 <constraint firstItem="9KJ-6K-ceP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vyQ-n2-pb4"/>
                 <constraint firstAttribute="trailing" secondItem="kS3-GK-CMs" secondAttribute="trailing" id="yI9-HI-mSo"/>
             </constraints>

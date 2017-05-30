@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSDateSelectView" customModule="Orthopaediscore" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="3Vi-SA-s1c" id="w5A-l5-dhZ"/>
+                <outlet property="titleLabel" destination="zGM-ft-fjC" id="CVh-XF-4li"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input_border" translatesAutoresizingMaskIntoConstraints="NO" id="fGF-qH-rYv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出生时间 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-ft-fjC">
+                    <rect key="frame" x="16" y="0.0" width="90" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="0a3-Fx-naj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vi-SA-s1c">
+                    <rect key="frame" x="116" y="0.0" width="243" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-Xa-WkB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <connections>
+                        <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="xu0-A1-tdb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wcA-Xa-WkB" secondAttribute="bottom" id="DLn-Ag-KWB"/>
+                <constraint firstItem="zGM-ft-fjC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="DnB-DD-19h"/>
+                <constraint firstAttribute="trailing" secondItem="wcA-Xa-WkB" secondAttribute="trailing" id="GO5-Z4-t4Q"/>
+                <constraint firstAttribute="bottom" secondItem="zGM-ft-fjC" secondAttribute="bottom" id="MH0-ST-jWb"/>
+                <constraint firstItem="zGM-ft-fjC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R1X-4d-Fx1"/>
+                <constraint firstAttribute="bottom" secondItem="fGF-qH-rYv" secondAttribute="bottom" id="XOG-TP-4qi"/>
+                <constraint firstAttribute="bottom" secondItem="3Vi-SA-s1c" secondAttribute="bottom" id="XUs-wA-Wsu"/>
+                <constraint firstItem="fGF-qH-rYv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YE7-xW-F5U"/>
+                <constraint firstAttribute="trailing" secondItem="3Vi-SA-s1c" secondAttribute="trailing" constant="16" id="YNA-si-2ia"/>
+                <constraint firstItem="3Vi-SA-s1c" firstAttribute="leading" secondItem="zGM-ft-fjC" secondAttribute="trailing" constant="10" id="bmf-1W-tdq"/>
+                <constraint firstItem="3Vi-SA-s1c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fxB-h8-HiG"/>
+                <constraint firstItem="wcA-Xa-WkB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h4q-G4-ars"/>
+                <constraint firstItem="wcA-Xa-WkB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lIZ-VN-3jB"/>
+                <constraint firstAttribute="trailing" secondItem="fGF-qH-rYv" secondAttribute="trailing" id="qJU-fk-ulR"/>
+                <constraint firstItem="fGF-qH-rYv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rPS-wi-fwW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="input_border" width="659" height="112"/>
+    </resources>
+</document>

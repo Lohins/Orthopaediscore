@@ -8,7 +8,12 @@
 
 import UIKit
 
-class OSMainViewController: UIViewController {
+class OSMainViewController: UIViewController, SectionNavDelegate {
+    
+    var managePatientSV: OSMainSectionView!
+    var assignTableSV: OSMainSectionView!
+    var beginVisitSV: OSMainSectionView!
+    var statisticsSV: OSMainSectionView!
 
     
     
@@ -37,28 +42,34 @@ class OSMainViewController: UIViewController {
         
         // 管理患者
         let sep_width = (section_width - margin_horizon) / 2
-        let sectionView1 = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
-        sectionView1.update("管理患者", UIImage.init(named: "tmpicon")!)
+        managePatientSV = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
+        managePatientSV.update("管理患者", UIImage.init(named: "tmpicon")!)
 
         
         // 分配量表
-        let sectionView2 = OSMainSectionView.init(frame: CGRect.init(x:  sectionView1.right + margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
-        sectionView2.update("分配量表", UIImage.init(named: "tmpicon")!)
+        assignTableSV = OSMainSectionView.init(frame: CGRect.init(x:  managePatientSV.right + margin_horizon, y: offset + margin_horizon, width: sep_width, height: section_height))
+        assignTableSV.update("分配量表", UIImage.init(named: "tmpicon")!)
         
         // 开始随访
-        let sectionView3 = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: sectionView1.bottom + margin_horizon, width: section_width, height: section_height))
-        sectionView3.update("开始随访", UIImage.init(named: "tmpicon")!)
+        beginVisitSV = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: managePatientSV.bottom + margin_horizon, width: section_width, height: section_height))
+        beginVisitSV.update("开始随访", UIImage.init(named: "tmpicon")!)
         
         // 统计数据
-        let sectionView4 = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: sectionView3.bottom + margin_horizon, width: section_width, height: section_height))
-        sectionView4.update("统计数据", UIImage.init(named: "tmpicon")!)
-
+        statisticsSV = OSMainSectionView.init(frame: CGRect.init(x:  margin_horizon, y: beginVisitSV.bottom + margin_horizon, width: section_width, height: section_height))
+        statisticsSV.update("统计数据", UIImage.init(named: "tmpicon")!)
 
         
-        self.view.addSubview(sectionView1)
-        self.view.addSubview(sectionView2)
-        self.view.addSubview(sectionView3)
-        self.view.addSubview(sectionView4)
+        managePatientSV.delegate = self
+        assignTableSV.delegate = self
+        beginVisitSV.delegate = self
+        statisticsSV.delegate = self
+        
+        
+        
+        self.view.addSubview(managePatientSV)
+        self.view.addSubview(assignTableSV)
+        self.view.addSubview(beginVisitSV)
+        self.view.addSubview(statisticsSV)
         
         
     }
@@ -80,6 +91,25 @@ class OSMainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func jumpToNext(relatedTo targetView: OSMainSectionView) {
+        if targetView == self.managePatientSV{
+            let vc = OSPatientViewController()
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.present(nav, animated: true, completion: nil)
+        }
+        else if targetView == self.assignTableSV{
+        
+        }
+        else if targetView == self.beginVisitSV{
+        
+        }
+        else if targetView == self.statisticsSV{
+        
+        }
+        else{
+        }
     }
     
 

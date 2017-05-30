@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol SectionNavDelegate : class{
+    func jumpToNext(relatedTo targetView: OSMainSectionView) -> Void
+}
+
 class OSMainSectionView: UIView {
     
-    
+    weak var delegate : SectionNavDelegate?
     var view: UIView!
     
     // override initializers
@@ -56,4 +60,10 @@ class OSMainSectionView: UIView {
         self.titleLabel.text = title
     }
     
+    @IBAction func tapAction(_ sender: Any) {
+        
+        if let delegate = self.delegate{
+            delegate.jumpToNext(relatedTo: self)
+        }
+    }
 }
