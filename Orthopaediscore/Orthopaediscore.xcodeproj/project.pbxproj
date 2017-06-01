@@ -16,6 +16,11 @@
 		CE4F38E11EE05108003855D6 /* OSBriefTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38DF1EE05108003855D6 /* OSBriefTableViewCell.swift */; };
 		CE4F38E21EE05108003855D6 /* OSBriefTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4F38E01EE05108003855D6 /* OSBriefTableViewCell.xib */; };
 		CE4F38E41EE0531D003855D6 /* OSBriefTableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38E31EE0531D003855D6 /* OSBriefTableSectionHeader.swift */; };
+		CE4F38EA1EE08294003855D6 /* OSFillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38E91EE08294003855D6 /* OSFillTableViewController.swift */; };
+		CE4F38EC1EE0837E003855D6 /* OSQuestionChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38EB1EE0837E003855D6 /* OSQuestionChoiceCell.swift */; };
+		CE4F38EE1EE08397003855D6 /* OSQuestionChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4F38ED1EE08397003855D6 /* OSQuestionChoiceCell.xib */; };
+		CE4F38F01EE085FA003855D6 /* OSQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38EF1EE085FA003855D6 /* OSQuestionView.swift */; };
+		CE4F38F21EE086FF003855D6 /* OSQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38F11EE086FF003855D6 /* OSQuestion.swift */; };
 		CE5B9E981EDF84D700624D78 /* OSMTPatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9E971EDF84D700624D78 /* OSMTPatientTableViewController.swift */; };
 		CE5B9E9D1EDF857A00624D78 /* OSPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9E9C1EDF857A00624D78 /* OSPatient.swift */; };
 		CE5B9E9F1EDF8EFE00624D78 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9E9E1EDF8EFE00624D78 /* Date-Extension.swift */; };
@@ -84,6 +89,11 @@
 		CE4F38DF1EE05108003855D6 /* OSBriefTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSBriefTableViewCell.swift; sourceTree = "<group>"; };
 		CE4F38E01EE05108003855D6 /* OSBriefTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSBriefTableViewCell.xib; sourceTree = "<group>"; };
 		CE4F38E31EE0531D003855D6 /* OSBriefTableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSBriefTableSectionHeader.swift; sourceTree = "<group>"; };
+		CE4F38E91EE08294003855D6 /* OSFillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSFillTableViewController.swift; sourceTree = "<group>"; };
+		CE4F38EB1EE0837E003855D6 /* OSQuestionChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSQuestionChoiceCell.swift; sourceTree = "<group>"; };
+		CE4F38ED1EE08397003855D6 /* OSQuestionChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSQuestionChoiceCell.xib; sourceTree = "<group>"; };
+		CE4F38EF1EE085FA003855D6 /* OSQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSQuestionView.swift; sourceTree = "<group>"; };
+		CE4F38F11EE086FF003855D6 /* OSQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSQuestion.swift; sourceTree = "<group>"; };
 		CE5B9E971EDF84D700624D78 /* OSMTPatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMTPatientTableViewController.swift; sourceTree = "<group>"; };
 		CE5B9E9C1EDF857A00624D78 /* OSPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatient.swift; sourceTree = "<group>"; };
 		CE5B9E9E1EDF8EFE00624D78 /* Date-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
@@ -193,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4F38D91EE0473A003855D6 /* OSBriefTable.swift */,
+				CE4F38F11EE086FF003855D6 /* OSQuestion.swift */,
 			);
 			path = table;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				CE5B9E971EDF84D700624D78 /* OSMTPatientTableViewController.swift */,
 				CE4F38DB1EE04E24003855D6 /* OSAssignTableVC.swift */,
 				CE4F38DC1EE04E24003855D6 /* OSAssignTableVC.xib */,
+				CE4F38E91EE08294003855D6 /* OSFillTableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -222,6 +234,9 @@
 				CE4F38DF1EE05108003855D6 /* OSBriefTableViewCell.swift */,
 				CE4F38E01EE05108003855D6 /* OSBriefTableViewCell.xib */,
 				CE4F38E31EE0531D003855D6 /* OSBriefTableSectionHeader.swift */,
+				CE4F38EB1EE0837E003855D6 /* OSQuestionChoiceCell.swift */,
+				CE4F38ED1EE08397003855D6 /* OSQuestionChoiceCell.xib */,
+				CE4F38EF1EE085FA003855D6 /* OSQuestionView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -550,6 +565,7 @@
 				CE697C311EDA24B6009572E3 /* OSPatientViewController.xib in Resources */,
 				CE65A23F1ED4D52F00DBA8C2 /* OSMainViewController.xib in Resources */,
 				CE697C4B1EDD0800009572E3 /* OSDateSelectView.xib in Resources */,
+				CE4F38EE1EE08397003855D6 /* OSQuestionChoiceCell.xib in Resources */,
 				CE4F38DE1EE04E24003855D6 /* OSAssignTableVC.xib in Resources */,
 				CECF44971ECE735800D5B3E6 /* OSWelcomeViewController.xib in Resources */,
 				CE65A2481ED4DD0900DBA8C2 /* OSMainSectionView.xib in Resources */,
@@ -635,8 +651,11 @@
 				CE5B9EA11EDF941500624D78 /* String-Extension.swift in Sources */,
 				CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */,
 				CE65A2521ED4E32600DBA8C2 /* UIColor-Extension.swift in Sources */,
+				CE4F38F21EE086FF003855D6 /* OSQuestion.swift in Sources */,
 				CE65A2431ED4DA3900DBA8C2 /* OSMainSectionView.swift in Sources */,
 				CE4F38D71EDF9B38003855D6 /* OSBaseNetService.swift in Sources */,
+				CE4F38EA1EE08294003855D6 /* OSFillTableViewController.swift in Sources */,
+				CE4F38F01EE085FA003855D6 /* OSQuestionView.swift in Sources */,
 				CE5B9E9F1EDF8EFE00624D78 /* Date-Extension.swift in Sources */,
 				CE4F38E41EE0531D003855D6 /* OSBriefTableSectionHeader.swift in Sources */,
 				CECF44571ECE718C00D5B3E6 /* ViewController.swift in Sources */,
@@ -655,6 +674,7 @@
 				CE697C321EDA24B6009572E3 /* OSPatientTableViewCell.swift in Sources */,
 				CE5B9E981EDF84D700624D78 /* OSMTPatientTableViewController.swift in Sources */,
 				CE65A2411ED4D69300DBA8C2 /* Global.swift in Sources */,
+				CE4F38EC1EE0837E003855D6 /* OSQuestionChoiceCell.swift in Sources */,
 				CE65A2561ED4E32600DBA8C2 /* UIView-Extension.swift in Sources */,
 				CE697C3D1EDC6860009572E3 /* OSDropListView.swift in Sources */,
 				CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */,

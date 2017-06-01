@@ -9,6 +9,28 @@
 import UIKit
 
 class OSTableNetService: NSObject {
+    
+    func getTableInfoBy(id: Int , finished : @escaping (_ list : [OSQuestion]? , _ error: Error?)-> Void){
+        let url = BASEURL + "api/get_subtableinfo_by_subtable_id/"
+        let params = ["data": [
+            "subtableid" : id
+            ]]
+        
+        OSBaseNetService.sharedInstance.postWithoutCache(url, params: params as Dictionary<String, AnyObject>?) { (dict, error) in
+            if error != nil{
+                return finished(nil , error)
+            }
+            
+            if let data = dict{
+                let list = OSQuestion.parse(dict: data)
+                return finished(list , nil)
+            }
+            else{
+                return finished(nil , nil)
+            }
+            
+        }
+    }
 
     
     func getTableInfo(finished : @escaping (_ list : [OSBriefTable]? , _ error: Error?)-> Void){
