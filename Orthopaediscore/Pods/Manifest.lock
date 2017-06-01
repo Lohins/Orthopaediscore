@@ -44,7 +44,7 @@ PODS:
   - TPKeyboardAvoiding (1.2.11)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking
   - BlocksKit (~> 2.2.5)
   - Masonry (~> 0.5.3)
   - Material (~> 2.0)
@@ -58,9 +58,9 @@ SPEC CHECKSUMS:
   Masonry: 9f515466afe48632562342a40a1c224071a1a022
   Material: e27257b2efea0ea145150b141da22e1d68bef552
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   TPKeyboardAvoiding: e5ce146b313de063957bfa75a13f1e9b0ff18ab7
 
-PODFILE CHECKSUM: 50ec1d361a806ab6dd898866cc59b497188786b0
+PODFILE CHECKSUM: 08f04969613ab9ab6d7e42d4d252d637edf2b49f
 
 COCOAPODS: 1.2.1

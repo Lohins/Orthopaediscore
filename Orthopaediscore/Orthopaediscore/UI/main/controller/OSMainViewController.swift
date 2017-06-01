@@ -100,6 +100,9 @@ class OSMainViewController: UIViewController, SectionNavDelegate {
             self.present(nav, animated: true, completion: nil)
         }
         else if targetView == self.assignTableSV{
+            let vc = OSMTPatientTableViewController()
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.present(nav, animated: true, completion: nil)
         
         }
         else if targetView == self.beginVisitSV{

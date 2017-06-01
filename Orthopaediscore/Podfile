@@ -8,7 +8,7 @@ target 'Orthopaediscore' do
     pod 'Material', '~> 2.0'
     
     pod 'SDWebImage', '~> 3.5'
-    pod 'AFNetworking', '~> 2.0'
+    pod 'AFNetworking'
     pod 'BlocksKit', '~> 2.2.5'
     pod 'MBProgressHUD', '~> 0.9'
     pod 'TPKeyboardAvoiding', '~> 1.2.4'
