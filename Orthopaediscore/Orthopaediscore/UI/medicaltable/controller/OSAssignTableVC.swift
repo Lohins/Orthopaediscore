@@ -51,6 +51,19 @@ class OSAssignTableVC: UIViewController {
         leftButton.setImage(UIImage.init(named: "white_back_icon"), for: .normal)
         let leftBarButton = UIBarButtonItem.init(customView: leftButton)
         self.navigationItem.leftBarButtonItem = leftBarButton
+        
+        
+        let rightButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 50, height: 30))
+        rightButton.setTitle("确定", for: .normal)
+        rightButton.bk_(whenTapped: {[weak self]()-> Void in
+            if let weakSelf = self{
+                
+                // TODO 上交选择的量表
+            }
+        })
+        rightButton.setTitleColor(UIColor.white, for: .normal)
+        let rightBarButton = UIBarButtonItem.init(customView: rightButton)
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
     func updateData(){

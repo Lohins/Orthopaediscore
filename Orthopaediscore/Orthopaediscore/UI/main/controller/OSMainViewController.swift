@@ -106,7 +106,9 @@ class OSMainViewController: UIViewController, SectionNavDelegate {
         
         }
         else if targetView == self.beginVisitSV{
-        
+            let vc = OSATPatientTableViewController()
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.present(nav, animated: true, completion: nil)
         }
         else if targetView == self.statisticsSV{
         

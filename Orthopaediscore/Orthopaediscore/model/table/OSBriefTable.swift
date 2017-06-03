@@ -8,17 +8,25 @@
 
 import UIKit
 
+/*
+ 说明 ： 使用的地方有 1.给病人分配量表， 2.让病人填写量表页面。
+ */
+
+
 class OSBriefTable: NSObject {
     
     var name: String = ""
     var id: Int  = -1
     var subTable = [OSBriefTable]()
     
+    
     init(Name:String, ID: Int) {
         self.name = Name
         self.id = ID
     }
     
+    
+    // 初始化方法 ：分配量表的时候
     init(dict:Dictionary<String, Any>){
         if let Name = dict["subtablename"] as? String{
             self.name = Name

@@ -34,7 +34,7 @@ class OSQuestion: NSObject {
             
             var QList = [OSQuestion]()
             for questDict in list{
-                if let questionID = questDict["questionid"] as? Int, let questionContent = questDict["questioncontent"] as? String, let choiceList = dict["choiceinfo"] as? [Dictionary<String, Any>]{
+                if let questionID = questDict["questionid"] as? Int, let questionContent = questDict["questioncontent"] as? String, let choiceList = questDict["choiceinfo"] as? [Dictionary<String, Any>]{
                     let question = OSQuestion.init(Id: questionID, Content: questionContent)
                     var choices = [OSChoice]()
                     for choiceDict in choiceList{

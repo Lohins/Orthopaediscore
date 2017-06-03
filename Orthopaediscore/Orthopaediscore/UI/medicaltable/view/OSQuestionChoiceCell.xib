@@ -22,25 +22,25 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="83j-1w-7ma">
                     <rect key="frame" x="5" y="5" width="30" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="ESf-9G-GCS"/>
-                        <constraint firstAttribute="height" constant="30" id="fcV-nZ-htN"/>
+                        <constraint firstAttribute="width" constant="30" id="5hG-HJ-IQ0"/>
+                        <constraint firstAttribute="height" constant="30" id="kg7-FS-STC"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thc-f8-xXd">
-                    <rect key="frame" x="43" y="0.0" width="257" height="40"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thc-f8-xXd">
+                    <rect key="frame" x="43" y="5" width="257" height="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.094117647058823528" green="0.11764705882352941" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="83j-1w-7ma" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4DU-OH-Eyl"/>
-                <constraint firstItem="83j-1w-7ma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="95o-FF-7hZ"/>
-                <constraint firstAttribute="bottom" secondItem="thc-f8-xXd" secondAttribute="bottom" id="9wh-r6-onr"/>
-                <constraint firstAttribute="trailing" secondItem="thc-f8-xXd" secondAttribute="trailing" id="ChX-H1-iZr"/>
-                <constraint firstItem="thc-f8-xXd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kyc-MV-94T"/>
-                <constraint firstItem="thc-f8-xXd" firstAttribute="leading" secondItem="83j-1w-7ma" secondAttribute="trailing" constant="8" id="qLE-VA-GmB"/>
+                <constraint firstItem="thc-f8-xXd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="9TM-mz-gu1"/>
+                <constraint firstItem="83j-1w-7ma" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="9Xp-b4-KgN"/>
+                <constraint firstAttribute="bottom" secondItem="thc-f8-xXd" secondAttribute="bottom" constant="5" id="IHz-fJ-Rhm"/>
+                <constraint firstItem="83j-1w-7ma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="IgH-MB-753"/>
+                <constraint firstAttribute="trailing" secondItem="thc-f8-xXd" secondAttribute="trailing" id="ThG-Xt-N55"/>
+                <constraint firstItem="thc-f8-xXd" firstAttribute="leading" secondItem="83j-1w-7ma" secondAttribute="trailing" constant="8" id="cSq-4f-JCp"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

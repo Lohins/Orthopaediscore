@@ -1,57 +1,64 @@
 //
-//  OSMTPatientTableViewController.swift
+//  OSATSelectedTBV.swift
 //  Orthopaediscore
 //
-//  Created by S.t on 2017/5/31.
+//  Created by S.t on 2017/6/3.
 //  Copyright © 2017年 S.t. All rights reserved.
 //
 
-/*
- 这个病人列表控制器 使用在 管理量表 中， MT 缩写代表 Manage Table
- 
- */
-
 import UIKit
 
-class OSMTPatientTableViewController: UITableViewController {
-    let CellIdentifier = "OSPatientTableViewCell"
+class OSATSelectedTBV: UITableViewController {
+    let CellIdentifier = "OSATSelectedTBCell"
     
-    var patientList = [OSPatient]()
-    
+    var targetPatient: OSPatient!
+    var tableList = [OSUniqueTable]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNav()
+        self.setupNav()
         
-        testData()
-        
+        self.updateData()
+
         self.tableView.register(UINib.init(nibName: CellIdentifier, bundle: nil), forCellReuseIdentifier: CellIdentifier)
-        self.tableView.backgroundColor = BGCOLOR
-        self.tableView.tableFooterView = UIView.init(frame: CGRect.init())
-        
+        self.tableView.tableFooterView = UIView.init(frame: CGRectZore)
     }
     
-    func testData(){
-        let dict = ["name": "李华",
-                    "office" : 1,
-                    "comment": "关节病",
-                    "leavedate" : "2017-02-25T00:00:0",
-                    "admissdate" : "2017-02-25T00:00:0"] as [String : Any]
-        let dict2 = ["name": "小明",
-                    "office" : 1,
-                    "comment": "鼻炎",
-                    "leavedate" : "2017-02-25T00:00:0",
-                    "admissdate" : "2017-02-25T00:00:0"] as [String : Any]
+    init(patient: OSPatient){
+        super.init(nibName: nil, bundle: nil)
+        self.targetPatient = patient
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateData(){
         
-        let patient1 = OSPatient.init(shortDict: dict as [String: Any])
-        let patient2 = OSPatient.init(shortDict: dict2 as [String: Any])
-        patientList.append(contentsOf : [patient1 , patient2])
-        self.tableView.reloadData()
-
+        // TODO : 临时的， 需要网络获取
+        let dict: Dictionary<String, Any> = [
+        "subtablename": "Foot & Ankle Disability index",
+        "ticket": "91089fb3-2a51-4650-8e1f-87cae8efb414",
+        "subtableid": 1,
+        "patientid": 1,
+        "handoutdate": "2017-05-28"
+        ]
+        
+        for _ in 0...3{
+            let table = OSUniqueTable.init(uniqueDict: dict)
+            self.tableList.append(table)
+            
+        }
+        
     }
     
     func setupNav(){
-        self.title = "请选择患者"
+        
+        self.view.backgroundColor = UIColor.init(floatValueRed: 24, green: 30, blue: 40, alpha: 1)
+        self.tableView.backgroundColor = UIColor.clear
+        
+        self.title = "患者：" + self.targetPatient.name
         self.navigationController?.navigationBar.barTintColor = BGCOLOR
         self.view.backgroundColor = BGCOLOR
         
@@ -60,7 +67,7 @@ class OSMTPatientTableViewController: UITableViewController {
         let leftButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         leftButton.bk_(whenTapped: {[weak self]()-> Void in
             if let weakSelf = self{
-                weakSelf.navigationController?.dismiss(animated: true, completion: nil)
+                let _ = weakSelf.navigationController?.popViewController(animated: true)
             }
         })
         leftButton.setImage(UIImage.init(named: "white_back_icon"), for: .normal)
@@ -76,39 +83,34 @@ class OSMTPatientTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.patientList.count
+        return self.tableList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! OSPatientTableViewCell
-        let patient = self.patientList[indexPath.row]
-        cell.NameLabel.text = patient.name
-        cell.DepLabel.text = "keshi"
-        cell.IntimeLabel.text = patient.admissDate?.toString()
-        cell.OuttimeLabel.text = patient.leaveDate?.toString()
-        cell.InfoLabel.text = patient.comment
-//        cell.GenderImage.image = UIImage(named:item["Gender"]!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier , for: indexPath) as! OSATSelectedTBCell
         
-        cell.selectionStyle = .none
-
+        let table = self.tableList[indexPath.row]
+        
+        cell.updateTitle(title: table.tableName)
+        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = OSAssignTableVC()
+        let table = self.tableList[indexPath.row]
+        
+        let vc = OSFillTableViewController.init(table: table)
+        
         
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
+ 
 
     /*
     // Override to support conditional editing of the table view.

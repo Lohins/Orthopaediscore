@@ -2,23 +2,29 @@
 //  OSFillTableViewController.swift
 //  Orthopaediscore
 //
-//  Created by S.t on 2017/6/1.
+//  Created by S.t on 2017/6/3.
 //  Copyright © 2017年 S.t. All rights reserved.
 //
 
 import UIKit
 
-class OSFillTableViewController: UITableViewController {
+class OSFillTableViewController: UIViewController {
+
     
-    var tableID: Int = -1
+    @IBOutlet var linearScrollView: LinearScrollView!
+    
+    var questionViewList = [OSQuestionView]()
+    
+    var uniqueTable: OSUniqueTable!
+
     
     var dataList = [OSQuestion]()
     
     let service = OSTableNetService()
     
-    init(id: Int) {
+    init(table: OSUniqueTable) {
         super.init(nibName: nil, bundle: nil)
-        self.tableID = id
+        self.uniqueTable = table
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,78 +33,57 @@ class OSFillTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupNav()
         self.updateData()
     }
     
+    func setupNav(){
+        self.title = "量表: " + self.uniqueTable.tableName
+        self.navigationController?.navigationBar.barTintColor = BGCOLOR
+        self.view.backgroundColor = BGCOLOR
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        let leftButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
+        leftButton.bk_(whenTapped: {[weak self]()-> Void in
+            if let weakSelf = self{
+                let _ = weakSelf.navigationController?.popViewController(animated: true)
+            }
+        })
+        leftButton.setImage(UIImage.init(named: "white_back_icon"), for: .normal)
+        let leftBarButton = UIBarButtonItem.init(customView: leftButton)
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
     func updateData(){
-        self.service.getTableInfoBy(id: self.tableID) { (list, err) in
+        self.service.getTableInfoBy(id: self.uniqueTable.tableId) { (list, err) in
             if let list = list{
                 self.dataList = list
-                self.tableView.reloadData()
+                
+                self.updateUI()
             }
         }
+    }
+    
+    func updateUI(){
+        for quest in self.dataList{
+            let view =  OSQuestionView.init(frame: CGRectZore, Question: quest)
+            view.center = CGPoint.init(x: SCREENWIDTH / 2, y: SCREENHEIGHT / 2)
+
+            self.linearScrollView.linear_addSubview(view, paddingTop: 10, paddingBottom: 10)
+            self.questionViewList.append(view)
+        }
+        
+        let buttonView = TableSubmitButton.factory()
+        self.linearScrollView.linear_addSubview(buttonView, paddingTop: 10, paddingBottom: 10)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
 
     /*
     // MARK: - Navigation
@@ -109,5 +94,33 @@ class OSFillTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    class TableSubmitButton: UIView{
+        
+        var tapBlock: (() -> Void)?
+        
+        class func factory() -> TableSubmitButton{
+            return TableSubmitButton.init(frame: CGRect.init(x: 0, y: 0, width: SCREENWIDTH, height: 50))
+            
+        }
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.setupUI()
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        func setupUI(){
+            let button = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: self.width, height: self.height))
+            button.setTitle("确认提交", for: .normal)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.backgroundColor = UIColor.blue
+            self.addSubview(button)
+        }
+    }
 
 }
