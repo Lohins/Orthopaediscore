@@ -28,4 +28,14 @@ class OSPatientTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func update(patient: OSPatient){
+        self.NameLabel.text = patient.name
+        self.OuttimeLabel.text = patient.leaveDate?.toString()
+        self.IntimeLabel.text = patient.admissDate?.toString()
+        self.InfoLabel.text = patient.comment
+        if let name = OSAppCenter.sharedInstance.officeDict[patient.office]{
+            self.DepLabel.text = name
+        }
+    }
+    
 }

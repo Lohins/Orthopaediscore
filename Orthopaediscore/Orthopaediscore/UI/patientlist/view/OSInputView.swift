@@ -49,5 +49,9 @@ class OSInputView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
+    
+    func updateContent(text: String){
+        self.textField.text = text
+    }
 
 }

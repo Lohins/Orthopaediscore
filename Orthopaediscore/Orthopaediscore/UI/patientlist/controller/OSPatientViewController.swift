@@ -16,6 +16,8 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
 
     var contentTableView : UITableView!
     
+    var patientList = [OSPatient]()
+    
     var tableData = [["Name":"男病人","Department":"骨科","Intime":"2017.02.03","Outtime":"2017.02.03","Information":"骨关节病","Gender":"Male.png"],["Name":"女病人","Department":"骨科","Intime":"2017.02.03","Outtime":"2017.02.03","Information":"肱骨骨折","Gender":"Female.png"]]
     
     override func loadView() {
@@ -27,6 +29,8 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.setupNav()
         
+        self.updateData()
+        
         //创建表视图
         contentTableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
         contentTableView.backgroundColor = UIColor.clear
@@ -34,9 +38,19 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         contentTableView.delegate = self
         contentTableView.dataSource = self
         contentTableView.register(UINib.init(nibName: CellIdentifier, bundle: nil), forCellReuseIdentifier: CellIdentifier)
-        
+        contentTableView.tableFooterView = UIView.init(frame: CGRectZore)
 
         self.view.addSubview(self.contentTableView)
+    }
+    
+    func updateData(){
+        let service = OSPatientService()
+        service.getPatientList { (list, error) in
+            if let list = list{
+                self.patientList = list
+                self.contentTableView.reloadData()
+            }
+        }
     }
     
     func setupNav(){
@@ -60,7 +74,10 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         let rightButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         rightButton.bk_(whenTapped: {[weak self]()-> Void in
             if let weakSelf = self{
-                let vc = OSPatientDetailViewController()
+                let vc = OSPatientDetailViewController.init(flag: 0, patientID: -1, finishBlk: {
+                    weakSelf.updateData()
+                })
+                
                 weakSelf.navigationController?.pushViewController(vc, animated: true)
             }
         })
@@ -76,7 +93,7 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
     
     //返回表格行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableData.count
+        return self.patientList.count
     }
     
     //单元格高度
@@ -91,13 +108,16 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
     {
         let cell:OSPatientTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
             as! OSPatientTableViewCell
-        let item = tableData[indexPath.row]
-        cell.NameLabel.text = item["Name"]
-        cell.DepLabel.text = item["Department"]
-        cell.IntimeLabel.text = item["Intime"]
-        cell.OuttimeLabel.text = item["Outtime"]
-        cell.InfoLabel.text = item["Information"]
-        cell.GenderImage.image = UIImage(named:item["Gender"]!)
+//        let item = tableData[indexPath.row]
+//        cell.NameLabel.text = item["Name"]
+//        cell.DepLabel.text = item["Department"]
+//        cell.IntimeLabel.text = item["Intime"]
+//        cell.OuttimeLabel.text = item["Outtime"]
+//        cell.InfoLabel.text = item["Information"]
+//        cell.GenderImage.image = UIImage(named:item["Gender"]!)
+//        
+        let patient = self.patientList[indexPath.row]
+        cell.update(patient: patient)
         return cell
     }
     
@@ -105,14 +125,16 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         super.didReceiveMemoryWarning()
     }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
-//                   forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            tableData.remove(at: indexPath.row)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let patient = self.patientList[indexPath.row]
+        
+//        let vc = OSPatientDetailViewController.init(flag: 1, patientID: patient., finishBlk: <#T##() -> Void#>)
 //        
-//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
+//            OSPatientDetailViewController.init(patient: patient) {
+//            self.contentTableView.reloadData()
 //        }
-//    }
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

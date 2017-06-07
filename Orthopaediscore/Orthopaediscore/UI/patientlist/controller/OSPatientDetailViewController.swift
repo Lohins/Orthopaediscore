@@ -24,12 +24,39 @@ class OSPatientDetailViewController: UIViewController {
     
     var diagnosisTextView: UITextView!
     
+    var patient: OSPatient = OSPatient.init()
+    var patientId: Int
+    var blk: (()-> Void)
+    
+    init(flag: Int, patientID: Int , finishBlk: @escaping ()-> Void){
+        self.patientId = patientID
+        self.blk = finishBlk
+        super.init(nibName: nil, bundle: nil)
+
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupNav()
+        
+        self.setupUI()
+
+        self.fillData()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setupNav(){
         self.title = "详细信息"
         let leftButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         leftButton.bk_(whenTapped: {[weak self]()-> Void in
@@ -42,14 +69,6 @@ class OSPatientDetailViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarButton
         
         self.view.backgroundColor = UIColor.init(floatValueRed: 24, green: 31, blue: 40, alpha: 1)
-        
-        self.setupUI()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setupUI(){
@@ -130,15 +149,10 @@ class OSPatientDetailViewController: UIViewController {
         self.mainScrollView.contentSize = CGSize.init(width: SCREENWIDTH, height: self.diagnosisTextView.bottom + margin)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func fillData(){
+        if self.patient.name == ""{
+            
+        }
     }
-    */
 
 }

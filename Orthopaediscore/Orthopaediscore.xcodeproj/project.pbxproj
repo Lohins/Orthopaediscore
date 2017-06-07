@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		302DCFAD56EFD59C14557233 /* Pods_Orthopaediscore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E9EFAB6064AB5A1D89A92B /* Pods_Orthopaediscore.framework */; };
+		CE0F133E1EE83B510086A526 /* OSPatientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F133D1EE83B510086A526 /* OSPatientService.swift */; };
+		CE0F13401EE83CD70086A526 /* OSOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F133F1EE83CD70086A526 /* OSOffice.swift */; };
+		CE0F13431EE83DC00086A526 /* OSUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F13421EE83DC00086A526 /* OSUserService.swift */; };
+		CE0F13461EE840AA0086A526 /* OSDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F13451EE840AA0086A526 /* OSDoctor.swift */; };
+		CE0F13481EE840F60086A526 /* OSAppCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F13471EE840F60086A526 /* OSAppCenter.swift */; };
 		CE4F38D51EDF9AFA003855D6 /* OSTableNetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38D41EDF9AFA003855D6 /* OSTableNetService.swift */; };
 		CE4F38D71EDF9B38003855D6 /* OSBaseNetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38D61EDF9B38003855D6 /* OSBaseNetService.swift */; };
 		CE4F38DA1EE0473A003855D6 /* OSBriefTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F38D91EE0473A003855D6 /* OSBriefTable.swift */; };
@@ -89,6 +94,11 @@
 /* Begin PBXFileReference section */
 		15764DB0EF83F1CC9B57C754 /* Pods-Orthopaediscore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.debug.xcconfig"; sourceTree = "<group>"; };
 		68F9F29C5CABA46EE75C9C6F /* Pods-Orthopaediscore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orthopaediscore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orthopaediscore/Pods-Orthopaediscore.release.xcconfig"; sourceTree = "<group>"; };
+		CE0F133D1EE83B510086A526 /* OSPatientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSPatientService.swift; sourceTree = "<group>"; };
+		CE0F133F1EE83CD70086A526 /* OSOffice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSOffice.swift; sourceTree = "<group>"; };
+		CE0F13421EE83DC00086A526 /* OSUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSUserService.swift; sourceTree = "<group>"; };
+		CE0F13451EE840AA0086A526 /* OSDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSDoctor.swift; sourceTree = "<group>"; };
+		CE0F13471EE840F60086A526 /* OSAppCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSAppCenter.swift; sourceTree = "<group>"; };
 		CE4F38D41EDF9AFA003855D6 /* OSTableNetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTableNetService.swift; sourceTree = "<group>"; };
 		CE4F38D61EDF9B38003855D6 /* OSBaseNetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSBaseNetService.swift; sourceTree = "<group>"; };
 		CE4F38D91EE0473A003855D6 /* OSBriefTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSBriefTable.swift; sourceTree = "<group>"; };
@@ -200,9 +210,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE0F13411EE83DAF0086A526 /* usermanage */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F13421EE83DC00086A526 /* OSUserService.swift */,
+			);
+			path = usermanage;
+			sourceTree = "<group>";
+		};
+		CE0F13441EE8409C0086A526 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F13451EE840AA0086A526 /* OSDoctor.swift */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
 		CE4F38D21EDF9AA5003855D6 /* patient */ = {
 			isa = PBXGroup;
 			children = (
+				CE0F133D1EE83B510086A526 /* OSPatientService.swift */,
 			);
 			path = patient;
 			sourceTree = "<group>";
@@ -298,6 +325,7 @@
 		CE5B9E991EDF855900624D78 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE0F13441EE8409C0086A526 /* user */,
 				CE4F38D81EE046EC003855D6 /* table */,
 				CE5B9E9A1EDF855900624D78 /* patient */,
 			);
@@ -308,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5B9E9C1EDF857A00624D78 /* OSPatient.swift */,
+				CE0F133F1EE83CD70086A526 /* OSOffice.swift */,
 			);
 			path = patient;
 			sourceTree = "<group>";
@@ -315,6 +344,7 @@
 		CE5B9E9B1EDF856300624D78 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				CE0F13411EE83DAF0086A526 /* usermanage */,
 				CE4F38D21EDF9AA5003855D6 /* patient */,
 				CE4F38D31EDF9AA5003855D6 /* table */,
 				CE4F38D61EDF9B38003855D6 /* OSBaseNetService.swift */,
@@ -437,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65A2401ED4D69300DBA8C2 /* Global.swift */,
+				CE0F13471EE840F60086A526 /* OSAppCenter.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -710,11 +741,13 @@
 				CE5B9E9D1EDF857A00624D78 /* OSPatient.swift in Sources */,
 				CE5B9EA11EDF941500624D78 /* String-Extension.swift in Sources */,
 				CECF44961ECE735800D5B3E6 /* OSWelcomeViewController.swift in Sources */,
+				CE0F13481EE840F60086A526 /* OSAppCenter.swift in Sources */,
 				CE4F38F71EE2FD93003855D6 /* LinearScrollViewItem.swift in Sources */,
 				CE65A2521ED4E32600DBA8C2 /* UIColor-Extension.swift in Sources */,
 				CE4F38F21EE086FF003855D6 /* OSQuestion.swift in Sources */,
 				CE65A2431ED4DA3900DBA8C2 /* OSMainSectionView.swift in Sources */,
 				CE4F38D71EDF9B38003855D6 /* OSBaseNetService.swift in Sources */,
+				CE0F13431EE83DC00086A526 /* OSUserService.swift in Sources */,
 				CE4F38F01EE085FA003855D6 /* OSQuestionView.swift in Sources */,
 				CE5B9E9F1EDF8EFE00624D78 /* Date-Extension.swift in Sources */,
 				CE4F39041EE31906003855D6 /* OSUniqueTable.swift in Sources */,
@@ -729,7 +762,9 @@
 				CE697C391EDC6340009572E3 /* OSPickerView.swift in Sources */,
 				CE4F39021EE30406003855D6 /* OSATSelectedTBV.swift in Sources */,
 				CE4F38D51EDF9AFA003855D6 /* OSTableNetService.swift in Sources */,
+				CE0F13461EE840AA0086A526 /* OSDoctor.swift in Sources */,
 				CE4F39071EE31FFF003855D6 /* OSATSelectedTBCell.swift in Sources */,
+				CE0F133E1EE83B510086A526 /* OSPatientService.swift in Sources */,
 				CE697C451EDD04B4009572E3 /* OSTimePickerView.swift in Sources */,
 				CE697C411EDC6A13009572E3 /* OSInputView.swift in Sources */,
 				CE697C301EDA24B6009572E3 /* OSPatientViewController.swift in Sources */,
@@ -744,6 +779,7 @@
 				CE65A2501ED4E32600DBA8C2 /* Double-Extension.swift in Sources */,
 				CE65A23E1ED4D52F00DBA8C2 /* OSMainViewController.swift in Sources */,
 				CE4F38E11EE05108003855D6 /* OSBriefTableViewCell.swift in Sources */,
+				CE0F13401EE83CD70086A526 /* OSOffice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

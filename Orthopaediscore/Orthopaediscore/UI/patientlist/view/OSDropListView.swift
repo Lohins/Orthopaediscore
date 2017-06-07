@@ -66,6 +66,13 @@ class OSDropListView: UIView {
     func setupUI(){
     }
     
+    func updateContent(text: String){
+        if let index = self.dataList.index(of: text){
+            self.contentLabel.text = text
+            self.picker.updateSelection(index: index)
+        }
+    }
+    
     
     @IBAction func tapAction(_ sender: Any) {
         self.getCurrentViewController()?.view.addSubview(self.picker)

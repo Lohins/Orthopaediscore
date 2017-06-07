@@ -75,6 +75,13 @@ class OSPickerView: UIView {
 
         })
         self.addSubview(doneButton)
-        
     }
+    
+    func updateSelection(index: Int){
+        if index < self.picker.numberOfComponents{
+            self.picker.selectedRow(inComponent: index)
+        }
+    }
+    
+    
 }

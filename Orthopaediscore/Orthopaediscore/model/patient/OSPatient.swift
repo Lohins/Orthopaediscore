@@ -20,6 +20,10 @@ class OSPatient: NSObject {
     var leaveDate: Date?
     var comment: String = ""
     
+    override init(){
+    
+    }
+    
     init(dict: Dictionary<String, Any>){
     
     }
