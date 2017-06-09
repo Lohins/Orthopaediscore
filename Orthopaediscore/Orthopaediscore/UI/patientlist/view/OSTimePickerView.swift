@@ -13,6 +13,8 @@ class OSTimePickerView: UIView {
     var block : ((_ str: String)-> Void)?
     
     var datePicker: UIDatePicker!
+    
+    var selectedDate: Date?
 
     // override initializers
     override init(frame: CGRect) {
@@ -29,11 +31,13 @@ class OSTimePickerView: UIView {
         self.backgroundColor = UIColor.init(floatValueRed: 0, green: 0, blue: 0, alpha: 0.8)
         
         self.datePicker = UIDatePicker.init(frame: CGRect.init(x: 0, y: 0, width: SCREENWIDTH, height: self.height / 3))
-        self.datePicker.top = self.height / 2
+//        self.datePicker.top = self.height / 2
+        self.datePicker.bottom = self.height
         self.datePicker.datePickerMode = .date
         self.datePicker.locale = Locale.init(identifier: "zh_CN")
         self.datePicker.setValue(UIColor.white, forKey: "textColor")
         self.addSubview(self.datePicker)
+        self.datePicker.backgroundColor = UIColor.lightGray
         
         let doneButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 50))
         doneButton.setTitleColor(UIColor.white, for: .normal)
@@ -45,6 +49,16 @@ class OSTimePickerView: UIView {
 
     }
     
+    func updateDate(date: Date){
+        self.selectedDate = date
+        self.datePicker.setDate(date, animated: true)
+    }
+    
+    func getDate() -> Date?{
+        
+        return self.selectedDate
+    }
+    
     func dateChanged() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
@@ -52,6 +66,8 @@ class OSTimePickerView: UIView {
         if let blk = self.block{
             blk(dateStr)
         }
+        
+        self.selectedDate = self.datePicker.date
         
         self.removeFromSuperview()
     }

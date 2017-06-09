@@ -10,6 +10,7 @@ import UIKit
 
 class OSTableNetService: NSObject {
     
+    // 根据表的id 获取 详细信息
     func getTableInfoBy(id: Int , finished : @escaping (_ list : [OSQuestion]? , _ error: Error?)-> Void){
         let url = BASEURL + "api/get_subtableinfo_by_subtable_id/"
         let params = ["data": [
@@ -32,7 +33,7 @@ class OSTableNetService: NSObject {
         }
     }
 
-    
+//    获取全部列表
     func getTableInfo(finished : @escaping (_ list : [OSBriefTable]? , _ error: Error?)-> Void){
         let url = BASEURL + "api/get_tableinfo/"
         
@@ -51,4 +52,62 @@ class OSTableNetService: NSObject {
             }
         }
     }
+    
+    
+//    给病人分配量表
+    func assignTableToPatient(withID ID: Int, forTables tableIDs: [Int] , finished : @escaping (_ list : Bool , _ error: Error?)-> Void){
+        let url = BASEURL + "api/give_table_to_patient/"
+        let params = ["data" :
+            [
+                "patientid" : ID,
+                "subtablelist" : tableIDs
+            ]
+        ]
+        
+        OSBaseNetService.sharedInstance.postWithoutCache(url, params: params as Dictionary<String, AnyObject>?) { (data, error) in
+            if error != nil{
+                return finished(false , error)
+            }
+            if let data = data, let status = data["status"] as? Int{
+                if status == 1{
+                    return finished(true , nil)
+                }
+                else{
+                    return finished(false , NSError.init(domain: "Error occurs when assign tables to patient.", code: 0, userInfo: nil))
+                }
+            }else{
+                    return finished(false , NSError.init(domain: "Error occurs when assign tables to patient.", code: 0, userInfo: nil))
+            }
+        }
+    
+    }
+    
+//    删除病人的某一张量表
+    func deleteTableForPatient(withID ID : Int, withTableID tableID: Int, withTicket ticket: String,finished : @escaping (_ list : Bool , _ error: Error?)-> Void){
+        let url = BASEURL + "api/delete_table_from_patient/"
+        let params = [ "data" :
+            [
+                "patientid" : ID,
+                "subtableid": tableID,
+                "ticket" : ticket
+            ]
+        ]
+        
+        OSBaseNetService.sharedInstance.postWithoutCache(url, params: params as Dictionary<String, AnyObject>?) { (data, error) in
+            if error != nil{
+                return finished(false , error)
+            }
+            if let data = data, let status = data["status"] as? Int{
+                if status == 1{
+                    return finished(true , nil)
+                }
+                else{
+                    return finished(false , NSError.init(domain: "Error occurs when delete tables to patient.", code: 0, userInfo: nil))
+                }
+            }else{
+                return finished(false , NSError.init(domain: "Error occurs when delete tables to patient.", code: 0, userInfo: nil))
+            }
+        }
+    }
+    
 }

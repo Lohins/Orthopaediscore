@@ -17,8 +17,8 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
     var contentTableView : UITableView!
     
     var patientList = [OSPatient]()
-    
-    var tableData = [["Name":"男病人","Department":"骨科","Intime":"2017.02.03","Outtime":"2017.02.03","Information":"骨关节病","Gender":"Male.png"],["Name":"女病人","Department":"骨科","Intime":"2017.02.03","Outtime":"2017.02.03","Information":"肱骨骨折","Gender":"Female.png"]]
+
+    let service = OSPatientService()
     
     override func loadView() {
         super.loadView()
@@ -29,7 +29,6 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.setupNav()
         
-        self.updateData()
         
         //创建表视图
         contentTableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
@@ -43,9 +42,12 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         self.view.addSubview(self.contentTableView)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.updateData()
+    }
+    
     func updateData(){
-        let service = OSPatientService()
-        service.getPatientList { (list, error) in
+        self.service.getPatientList { (list, error) in
             if let list = list{
                 self.patientList = list
                 self.contentTableView.reloadData()
@@ -74,9 +76,7 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         let rightButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         rightButton.bk_(whenTapped: {[weak self]()-> Void in
             if let weakSelf = self{
-                let vc = OSPatientDetailViewController.init(flag: 0, patientID: -1, finishBlk: {
-                    weakSelf.updateData()
-                })
+                let vc = OSPatientDetailViewController.init(flag: 0, patientID: -1)
                 
                 weakSelf.navigationController?.pushViewController(vc, animated: true)
             }
@@ -115,9 +115,10 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
 //        cell.OuttimeLabel.text = item["Outtime"]
 //        cell.InfoLabel.text = item["Information"]
 //        cell.GenderImage.image = UIImage(named:item["Gender"]!)
-//        
+//
         let patient = self.patientList[indexPath.row]
         cell.update(patient: patient)
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -125,29 +126,29 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
         super.didReceiveMemoryWarning()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let patient = self.patientList[indexPath.row]
-        
-//        let vc = OSPatientDetailViewController.init(flag: 1, patientID: patient., finishBlk: <#T##() -> Void#>)
-//        
-//            OSPatientDetailViewController.init(patient: patient) {
-//            self.contentTableView.reloadData()
-//        }
-//        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let index = indexPath.row
         
-        let editAction = UITableViewRowAction.init(style: .normal, title: "修改") { (action, indexPath) in
+        let patient = self.patientList[indexPath.row]
+
+        
+        let editAction = UITableViewRowAction.init(style: .normal, title: "修改") { [weak self] (action, indexPath) in
+            if let weakSelf = self{
+                let vc = OSPatientDetailViewController.init(flag: 1, patientID: patient.id)
+                weakSelf.navigationController?.pushViewController(vc, animated: true)
+            }
+            
             
         }
         
         let deleteAction = UITableViewRowAction.init(style: .destructive, title: "删除") { [weak self] (action, indexPath) in
             if let weakSelf = self{
-                weakSelf.tableData.remove(at: index)
-                weakSelf.contentTableView.reloadData()
+                weakSelf.service.deletePatient(patientID: patient.id, finish: { (flag, error) in
+                    if flag == true{
+                        weakSelf.patientList.remove(at: indexPath.row)
+                        weakSelf.contentTableView.reloadData()
+                    }
+                })
             }
         }
         

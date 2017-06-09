@@ -36,6 +36,12 @@ class OSPatientTableViewCell: UITableViewCell {
         if let name = OSAppCenter.sharedInstance.officeDict[patient.office]{
             self.DepLabel.text = name
         }
+        
+        if patient.sex == 1{
+            self.GenderImage.image = UIImage.init(named: "male_icon")
+        }
+        else{
+            self.GenderImage.image = UIImage.init(named: "female_icon")
+        }
     }
-    
 }

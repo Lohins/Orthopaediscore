@@ -73,6 +73,16 @@ class OSDropListView: UIView {
         }
     }
     
+    func getContent() -> String?{
+        if let text = self.contentLabel.text{
+            return text
+        }
+        else{
+            OSAppCenter.sharedInstance.InfoNotification(vc: self.getCurrentViewController()!, title: "提示", message: "请选择" + self.titleLabel.text!)
+            return nil
+        }
+    }
+    
     
     @IBAction func tapAction(_ sender: Any) {
         self.getCurrentViewController()?.view.addSubview(self.picker)

@@ -57,6 +57,20 @@ class OSDateSelectView: UIView {
         return view
     }
 
+    func updateDate(date: Date){
+        self.contentLabel.text = date.toString()
+        self.timePicker.updateDate(date: date)
+    }
+    
+    func getDate() -> Date?{
+        if let date = self.timePicker.getDate(){
+            return date
+        }
+        else{
+            OSAppCenter.sharedInstance.InfoNotification(vc: self.getCurrentViewController()!, title: "提示", message: "请选择" + self.titleLabel.text!)
+            return nil
+        }
+    }
     
     @IBAction func tapAction(_ sender: Any) {
         self.getCurrentViewController()?.view.addSubview(self.timePicker)

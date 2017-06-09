@@ -53,5 +53,14 @@ class OSInputView: UIView {
     func updateContent(text: String){
         self.textField.text = text
     }
-
+    
+    func getContent() -> String?{
+        if let text = self.textField.text, text != ""{
+            return text
+        }
+        else{
+            OSAppCenter.sharedInstance.InfoNotification(vc: self.getCurrentViewController()!, title: "提示", message: "请补全" + self.titleLabel.text!)
+            return nil
+        }
+    }
 }

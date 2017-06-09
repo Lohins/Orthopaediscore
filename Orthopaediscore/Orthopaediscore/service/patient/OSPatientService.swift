@@ -54,7 +54,7 @@ class OSPatientService: NSObject {
             }
 
             
-            if let data = data, let status = data["data"] as? Int{
+            if let data = data, let status = data["status"] as? Int{
                 if status == 1{
                     let dataList = data["data"] as! [Dictionary<String, Any>]
                     var result = [OSPatient]()
@@ -80,6 +80,19 @@ class OSPatientService: NSObject {
             if error != nil{
                 return finish(nil , error)
             }
+            if let data = data, let status = data["status"] as? Int{
+                if status == 1{
+                    let dict = data["data"] as! Dictionary<String, Any>
+                    let patient = OSPatient.init(longDict: dict)
+                    return finish(patient , nil)
+                }
+                else{
+                    return finish(nil , NSError.init(domain: "Error happens.", code: 0, userInfo:nil) )
+                }
+            }
+            else{
+                return finish(nil , NSError.init(domain: "Error happens.", code: 0, userInfo:nil) )
+            }
             
         }
     }
@@ -88,8 +101,10 @@ class OSPatientService: NSObject {
     func addPatientDetail(dict: Dictionary<String, Any> , finish:@escaping (_ flag: Bool, _ error: Error?) -> Void){
         let url = BASEURL + "api/add_patient/"
         let params = ["data" : dict]
+        print(params)
         OSBaseNetService.sharedInstance.postWithoutCache(url, params: params as Dictionary<String, AnyObject>?) { (data, error) in
             if error != nil{
+                print(error.debugDescription)
                 return finish(false , error)
             }
             if let data = data, let status = data["status"] as? Int{

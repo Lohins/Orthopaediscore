@@ -60,7 +60,7 @@ class OSWelcomeViewController: UIViewController {
     @IBAction func LoginAction(_ sender: Any) {
         
         // For test
-        let user = OSDoctor.init(id: 1)
+        let user = OSDoctor.init(id: 4)
         OSAppCenter.sharedInstance.login(doctor: user)
         
         let vc = OSMainViewController()

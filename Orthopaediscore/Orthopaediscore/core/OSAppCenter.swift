@@ -63,4 +63,31 @@ class OSAppCenter: NSObject {
         }
     }
     
+    
+    
+    // 消息提示
+    func InfoNotification(vc: UIViewController , title: String , message: String){
+        // 提示信息
+        let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        vc.present(alertVC, animated: true, completion: nil)
+        
+        let timer = DispatchTime.now() + 1.6
+        DispatchQueue.main.asyncAfter(deadline: timer) {
+            alertVC.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func InfoNotification(vc: UIViewController , title: String , message: String, finishBlock: @escaping ()-> Void){
+        // 提示信息
+        let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        vc.present(alertVC, animated: true, completion: nil)
+        
+        let timer = DispatchTime.now() + 1.6
+        DispatchQueue.main.asyncAfter(deadline: timer) {
+            alertVC.dismiss(animated: true, completion: nil)
+            finishBlock()
+        }
+    }
+    
+    
 }
