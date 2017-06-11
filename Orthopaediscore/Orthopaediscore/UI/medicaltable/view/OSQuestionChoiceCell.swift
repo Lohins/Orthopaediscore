@@ -42,8 +42,11 @@ class OSQuestionChoiceCell: UIView {
     }
     
     @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var iconImageView: UIImageView!
     
     var choiceID: Int  = -1
+    var selection: Bool = false
+    var tapBlock: ((_ target: OSQuestionChoiceCell) -> Void)?
 
     func update(content: String, ID: Int){
         self.choiceID = ID
@@ -61,5 +64,24 @@ class OSQuestionChoiceCell: UIView {
         self.frame = CGRect.init(x: 0, y: 0, width: SCREENWIDTH - 30, height: suitableH)
         
     }
+    
+    func unselect(){
+        self.selection = false
+        self.iconImageView.image = UIImage.init(named: "radio_unselect_icon")
+    }
+    
+    @IBAction func tapAction(_ sender: Any) {
+        self.selection = !self.selection
+        if self.selection == true{
+            self.iconImageView.image = UIImage.init(named: "radio_select_icon")
+            if let blk = self.tapBlock{
+                blk(self)
+            }
+        }
+        else{
+            self.iconImageView.image = UIImage.init(named: "radio_unselect_icon")
+        }
+    }
+    
 
 }

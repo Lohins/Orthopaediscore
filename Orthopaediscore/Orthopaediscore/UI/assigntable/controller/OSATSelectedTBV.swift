@@ -19,8 +19,6 @@ class OSATSelectedTBV: UITableViewController {
         
         self.setupNav()
         
-        self.updateData()
-
         self.tableView.register(UINib.init(nibName: CellIdentifier, bundle: nil), forCellReuseIdentifier: CellIdentifier)
         self.tableView.tableFooterView = UIView.init(frame: CGRectZore)
     }
@@ -34,22 +32,21 @@ class OSATSelectedTBV: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.updateData()
+    }
+    
     func updateData(){
         
-        // TODO : 临时的， 需要网络获取
-        let dict: Dictionary<String, Any> = [
-        "subtablename": "Foot & Ankle Disability index",
-        "ticket": "91089fb3-2a51-4650-8e1f-87cae8efb414",
-        "subtableid": 1,
-        "patientid": 1,
-        "handoutdate": "2017-05-28"
-        ]
+        let service = OSTableNetService()
         
-        for _ in 0...3{
-            let table = OSUniqueTable.init(uniqueDict: dict)
-            self.tableList.append(table)
-            
+        service.getUnfinishedTableBy(patientId: self.targetPatient.id) { (list, error) in
+            if let list = list {
+                self.tableList = list
+                self.tableView.reloadData()
+            }
         }
+        
         
     }
     

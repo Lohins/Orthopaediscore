@@ -16,6 +16,8 @@ class OSBriefTableViewCell: UITableViewCell {
     
     var selection: Bool = false
     
+    var tableId : Int = -1
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,8 +30,9 @@ class OSBriefTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateContent(content: String){
+    func updateContent(content: String , tableID: Int){
         self.contentLabel.text = content
+        self.tableId = tableID
     }
     
     @IBAction func tapAction(_ sender: Any) {

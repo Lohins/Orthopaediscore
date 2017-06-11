@@ -15,7 +15,8 @@ import UIKit
 
 class OSMTPatientTableViewController: UITableViewController {
     let CellIdentifier = "OSPatientTableViewCell"
-    
+    let service = OSPatientService()
+
     var patientList = [OSPatient]()
     
     override func viewDidLoad() {
@@ -23,31 +24,22 @@ class OSMTPatientTableViewController: UITableViewController {
         
         setupNav()
         
-        testData()
         
         self.tableView.register(UINib.init(nibName: CellIdentifier, bundle: nil), forCellReuseIdentifier: CellIdentifier)
         self.tableView.backgroundColor = BGCOLOR
         self.tableView.tableFooterView = UIView.init(frame: CGRect.init())
         
+        
+        self.updateData()
     }
     
-    func testData(){
-        let dict = ["name": "李华",
-                    "office" : 1,
-                    "comment": "关节病",
-                    "leavedate" : "2017-02-25T00:00:0",
-                    "admissdate" : "2017-02-25T00:00:0"] as [String : Any]
-        let dict2 = ["name": "小明",
-                    "office" : 1,
-                    "comment": "鼻炎",
-                    "leavedate" : "2017-02-25T00:00:0",
-                    "admissdate" : "2017-02-25T00:00:0"] as [String : Any]
-        
-        let patient1 = OSPatient.init(shortDict: dict as [String: Any])
-        let patient2 = OSPatient.init(shortDict: dict2 as [String: Any])
-        patientList.append(contentsOf : [patient1 , patient2])
-        self.tableView.reloadData()
-
+    func updateData(){
+        service.getPatientList { (list, error) in
+            if let list = list{
+                self.patientList = list
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func setupNav(){
@@ -88,15 +80,8 @@ class OSMTPatientTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! OSPatientTableViewCell
         let patient = self.patientList[indexPath.row]
-        cell.NameLabel.text = patient.name
-        cell.DepLabel.text = "keshi"
-        cell.IntimeLabel.text = patient.admissDate?.toString()
-        cell.OuttimeLabel.text = patient.leaveDate?.toString()
-        cell.InfoLabel.text = patient.comment
-//        cell.GenderImage.image = UIImage(named:item["Gender"]!)
-        
+        cell.update(patient: patient)
         cell.selectionStyle = .none
-
         return cell
     }
     
@@ -105,7 +90,9 @@ class OSMTPatientTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = OSAssignTableVC()
+        let patient = self.patientList[indexPath.row]
+        
+        let vc = OSAssignTableVC.init(patientID: patient.id)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

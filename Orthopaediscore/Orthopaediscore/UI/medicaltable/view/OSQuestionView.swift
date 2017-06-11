@@ -50,12 +50,24 @@ class OSQuestionView: UIView {
         separateLine.top = titleLabel.bottom + 5
         separateLine.backgroundColor = UIColor.white
         self.addSubview(separateLine)
-        
         self.addSubview(titleLabel)
+        
+        let exclusiveBlk = { [weak self] (target: OSQuestionChoiceCell) -> Void in
+            if let weakSelf = self{
+                for view in weakSelf.choiceViewList{
+                    if view  != target{
+                        view.unselect()
+                    }
+                }
+            }
+            
+        }
+        
         var offset = titleLabel.bottom + 10
         for choice in self.question.choiceList{
             let view = OSQuestionChoiceCell.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
             self.choiceViewList.append(view)
+            view.tapBlock = exclusiveBlk
             view.update(content: choice.choicecontent, ID: choice.choiceid)
             view.top = offset
             offset = offset + view.height
@@ -67,6 +79,26 @@ class OSQuestionView: UIView {
         self.layer.borderWidth = 2
         self.layer.cornerRadius = 8
         
+    }
+    
+    func summary() -> Dictionary<String, Any>?{
+        var dict = Dictionary<String, Any>()
+        dict["questionid"] = self.question.id
+        // 确保有选项被选中
+        var flag = 0
+        for choice in self.choiceViewList{
+            if choice.selection == true{
+                flag = 1
+                dict["choiceid"] = choice.choiceID
+                break
+            }
+        }
+        if flag == 0{
+            return nil
+        }
+        else{
+            return dict
+        }
     }
 
 

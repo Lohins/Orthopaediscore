@@ -87,7 +87,11 @@ class OSAppCenter: NSObject {
             alertVC.dismiss(animated: true, completion: nil)
             finishBlock()
         }
+        
+        
     }
+    
+    
     
     
 }

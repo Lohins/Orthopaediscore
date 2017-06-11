@@ -12,16 +12,27 @@ class OSAssignTableVC: UIViewController {
 
     @IBOutlet var contentTableView: UITableView!
     
+    @IBOutlet var titleLabel: UILabel!
+    
     let CellIdentifier = "OSBriefTableViewCell"
     
     var dataList = [OSBriefTable]()
     
     let service = OSTableNetService()
     
+    var patientId : Int
+    
+    init(patientID : Int){
+        self.patientId = patientID
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         self.contentTableView.delegate = self
         self.contentTableView.dataSource = self
@@ -35,6 +46,8 @@ class OSAssignTableVC: UIViewController {
     }
     
     func setupNav(){
+        
+        
         self.edgesForExtendedLayout = UIRectEdge()
         self.title = "量表分配"
         self.navigationController?.navigationBar.barTintColor = BGCOLOR
@@ -57,8 +70,7 @@ class OSAssignTableVC: UIViewController {
         rightButton.setTitle("确定", for: .normal)
         rightButton.bk_(whenTapped: {[weak self]()-> Void in
             if let weakSelf = self{
-                
-                // TODO 上交选择的量表
+                weakSelf.assignTables()
             }
         })
         rightButton.setTitleColor(UIColor.white, for: .normal)
@@ -67,17 +79,57 @@ class OSAssignTableVC: UIViewController {
     }
     
     func updateData(){
+        // 获取 列表信息
         self.service.getTableInfo { (list, err) in
             if let list = list{
                 self.dataList = list
                 self.contentTableView.reloadData()
             }
         }
+        
+        // 获取 病人信息
+        let patientService = OSPatientService()
+        patientService.getPatientDetail(id: self.patientId, finish: { (patient, error) in
+            if let patient = patient{
+                self.titleLabel.text = "请为病人：\(patient.name) 分配量表。"
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // 分配量表
+    func assignTables(){
+        self.service.assignTableToPatient(withID: self.patientId, forTables: self.getSelections()) { (flag, error) in
+            if flag == true{
+                print("分配量表成功")
+                OSAppCenter.sharedInstance.InfoNotification(vc: self, title: "提示", message: "分配量表成功", finishBlock: {
+                    let _ = self.navigationController?.popViewController(animated: true)
+                })
+            }
+            else{
+                OSAppCenter.sharedInstance.InfoNotification(vc: self, title: "提示", message: "分配量表失败，请稍后再试。")
+            }
+        }
+    }
+    
+    func getSelections() -> [Int]{
+        var result = [Int]()
+        for i in 0..<self.dataList.count{
+            let mainT = self.dataList[i]
+            for k in 0..<mainT.subTable.count{
+                let indexPath = IndexPath.init(row: k, section: i)
+                let cell = self.contentTableView.cellForRow(at: indexPath) as! OSBriefTableViewCell
+                if cell.selection == true{
+                    result.append(cell.tableId)
+                }
+            }
+        }
+        
+        return result
     }
     
 
@@ -96,7 +148,8 @@ extension OSAssignTableVC :UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! OSBriefTableViewCell
-        cell.updateContent(content: self.dataList[indexPath.section].subTable[indexPath.row].name)
+        let table = self.dataList[indexPath.section].subTable[indexPath.row]
+        cell.updateContent(content: table.name, tableID: table.id)
         return cell
         
         

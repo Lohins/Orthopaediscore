@@ -32,7 +32,7 @@ class OSBriefTable: NSObject {
             self.name = Name
         }
         
-        if let ID = dict["subtablid"] as? Int{
+        if let ID = dict["subtableid"] as? Int{
             self.id = ID
         }
     }

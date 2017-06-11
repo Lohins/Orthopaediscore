@@ -108,14 +108,6 @@ class OSPatientViewController: UIViewController, UITableViewDataSource, UITableV
     {
         let cell:OSPatientTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
             as! OSPatientTableViewCell
-//        let item = tableData[indexPath.row]
-//        cell.NameLabel.text = item["Name"]
-//        cell.DepLabel.text = item["Department"]
-//        cell.IntimeLabel.text = item["Intime"]
-//        cell.OuttimeLabel.text = item["Outtime"]
-//        cell.InfoLabel.text = item["Information"]
-//        cell.GenderImage.image = UIImage(named:item["Gender"]!)
-//
         let patient = self.patientList[indexPath.row]
         cell.update(patient: patient)
         cell.selectionStyle = .none

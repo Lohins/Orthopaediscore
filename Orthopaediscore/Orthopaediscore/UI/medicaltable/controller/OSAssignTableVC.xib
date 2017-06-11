@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSAssignTableVC" customModule="Orthopaediscore" customModuleProvider="target">
             <connections>
                 <outlet property="contentTableView" destination="h1s-EW-NM3" id="DHd-SU-kaz"/>
+                <outlet property="titleLabel" destination="lo0-89-AJh" id="Fca-3T-Cfw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

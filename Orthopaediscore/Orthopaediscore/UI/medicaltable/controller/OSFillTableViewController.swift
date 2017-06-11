@@ -56,11 +56,40 @@ class OSFillTableViewController: UIViewController {
     }
     
     func updateData(){
-        self.service.getTableInfoBy(id: self.uniqueTable.tableId) { (list, err) in
+        self.service.getTableInfoBy(id: 1) { (list, err) in
             if let list = list{
                 self.dataList = list
                 
                 self.updateUI()
+            }
+        }
+    }
+    
+    func submitTable(){
+        var questList = [Dictionary<String, Any>]()
+        for question in self.questionViewList{
+            if let dict = question.summary(){
+                questList.append(dict)
+            }
+            else{
+                return
+            }
+        }
+        let dict = [
+                    "patientid" : self.uniqueTable.patientId,
+                    "subtableid" : self.uniqueTable.tableId,
+                    "ticket" : self.uniqueTable.ticket,
+                    "content" : questList
+            ] as [String : Any]
+        print(dict)
+        self.service.submitTable(dict: dict) { (flag, error) in
+            if flag == true{
+                OSAppCenter.sharedInstance.InfoNotification(vc: self, title: "提示", message: "提交量表成功", finishBlock: {
+                    let _ = self.navigationController?.popViewController(animated: true)
+                })
+            }
+            else{
+                OSAppCenter.sharedInstance.InfoNotification(vc: self, title: "提示", message: "提交量表失败")
             }
         }
     }
@@ -75,6 +104,11 @@ class OSFillTableViewController: UIViewController {
         }
         
         let buttonView = TableSubmitButton.factory()
+        buttonView.tapBlock = { [weak self] () -> Void in
+            if let weakSelf = self{
+                weakSelf.submitTable()
+            }
+        }
         self.linearScrollView.linear_addSubview(buttonView, paddingTop: 10, paddingBottom: 10)
 
     }
@@ -119,6 +153,13 @@ class OSFillTableViewController: UIViewController {
             button.setTitle("确认提交", for: .normal)
             button.setTitleColor(UIColor.white, for: .normal)
             button.backgroundColor = UIColor.blue
+            button.bk_(whenTapped: { [weak self] () -> Void in
+                if let weakSelf = self{
+                    if let blk = weakSelf.tapBlock{
+                        blk()
+                    }
+                }
+            })
             self.addSubview(button)
         }
     }

@@ -20,6 +20,7 @@ class OSUniqueTable: NSObject {
     var tableId : Int  = -1
     var patientId : Int = -1
     var handoutDate: String = ""
+    var handinDate: String = ""
     
     init(uniqueDict: Dictionary<String, Any>){
         if let Name = uniqueDict["subtablename"] as? String{
@@ -36,6 +37,9 @@ class OSUniqueTable: NSObject {
         }
         if let HandoutDate = uniqueDict["handoutdate"] as? String{
             self.handoutDate = HandoutDate
+        }
+        if let HandinDate = uniqueDict["handindate"] as? String{
+            self.handinDate = HandinDate
         }
         
     }

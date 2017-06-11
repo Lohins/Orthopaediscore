@@ -25,4 +25,6 @@ class OSATSelectedTBCell: UITableViewCell {
         self.titleLabel.text = title
     }
     
+    
+    
 }

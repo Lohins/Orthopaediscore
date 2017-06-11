@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSQuestionChoiceCell" customModule="Orthopaediscore" customModuleProvider="target">
             <connections>
                 <outlet property="contentLabel" destination="thc-f8-xXd" id="ihH-Zj-g8w"/>
+                <outlet property="iconImageView" destination="83j-1w-7ma" id="3a4-Nb-GUA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="83j-1w-7ma">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_unselect_icon" translatesAutoresizingMaskIntoConstraints="NO" id="83j-1w-7ma">
                     <rect key="frame" x="5" y="5" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="5hG-HJ-IQ0"/>
@@ -32,6 +33,12 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-CK-ie3">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                    <connections>
+                        <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="KzX-vB-XjV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.094117647058823528" green="0.11764705882352941" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -39,16 +46,21 @@
                 <constraint firstItem="83j-1w-7ma" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="9Xp-b4-KgN"/>
                 <constraint firstAttribute="bottom" secondItem="thc-f8-xXd" secondAttribute="bottom" constant="5" id="IHz-fJ-Rhm"/>
                 <constraint firstItem="83j-1w-7ma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="IgH-MB-753"/>
+                <constraint firstItem="Ev2-CK-ie3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SsF-wt-sh7"/>
                 <constraint firstAttribute="trailing" secondItem="thc-f8-xXd" secondAttribute="trailing" id="ThG-Xt-N55"/>
                 <constraint firstItem="thc-f8-xXd" firstAttribute="leading" secondItem="83j-1w-7ma" secondAttribute="trailing" constant="8" id="cSq-4f-JCp"/>
+                <constraint firstAttribute="bottom" secondItem="Ev2-CK-ie3" secondAttribute="bottom" id="eBc-1c-pll"/>
+                <constraint firstAttribute="trailing" secondItem="Ev2-CK-ie3" secondAttribute="trailing" id="lVu-XQ-op3"/>
+                <constraint firstItem="Ev2-CK-ie3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xXV-9X-PTo"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-164" y="79"/>
         </view>
     </objects>
     <resources>
-        <image name="radio_uncheck" width="30" height="30"/>
+        <image name="radio_unselect_icon" width="30" height="30"/>
     </resources>
 </document>
